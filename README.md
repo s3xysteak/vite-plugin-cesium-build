@@ -1,15 +1,15 @@
-# vite-plugin-cesium-build
+# :tada:vite-plugin-cesium-build
 
 English | [简体中文](/README.zh-CN.md)
 
 Provides a fast configuration solution for CesiumJS projects.  
 It externalizes `Cesium.js` and automatically copies the four major libraries and core files of CesiumJS during the build process.  
-- **TypeScript** type support.
-- **Super fast!** In my laptop, the sample project only takes 300ms to complete the build because the Cesium library is not involved in the core build.
+- :sparkles: **TypeScript** type support.
+- :rocket: **Super fast!** In my laptop, the sample project only takes 300ms to complete the build because the Cesium library is not involved in the core build.
 
 ![Alt text](readme-image.png)
 
-## Usage
+## :memo: Usage
 
 Install this plugin
 
@@ -31,11 +31,10 @@ export default defineConfig({
 })
 ```
 
-Done? Yes, that's it! You have completed the entire configuration for CesiumJS! Now you can continue development and build as usual!
-
+Done? Yes, that's it! You have completed the entire configuration for CesiumJS! Now you can continue development and build as usual!  
 For those familiar with CesiumJS, you may wonder where to configure `window.CESIUM_BASE_URL`. In fact, this operation is also automatically handled by the plugin.
 
-## Options
+## :wrench: Options
 In addition, the plugin provides some configuration options:
 
 ```javascript
