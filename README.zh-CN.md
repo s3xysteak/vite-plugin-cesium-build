@@ -2,13 +2,14 @@
 
 [English](README.md) | 简体中文
 
-为 CesiumJS 的项目提供一个快速配置的解决方案。
-这会将 Cesium.js 外部化，并在打包时自动拷贝 CesiumJS 的四大库和核心文件。  
-**非常快！** 在我的笔记本中，示例项目仅需 300ms 完成打包，这是因为 Cesium 库不参与核心构建。
+为 CesiumJS 的项目提供一个自动化配置的解决方案。  
+这会将 `Cesium.js` 外部化，并在打包时自动拷贝 CesiumJS 的四大库和核心文件。  
+- **TypeScript** 完全类型支持
+- **非常快！** 在我的笔记本电脑中，示例项目仅需 300ms 完成打包，这是因为 Cesium 库不参与核心构建。
 
 ![Alt text](readme-image.png)
 
-## 如何使用？
+## 使用
 
 安装此插件
 
@@ -34,6 +35,7 @@ export default defineConfig({
 
 熟悉的 CesiumJS 的朋友可能会问，在哪里配置`window.CESIUM_BASE_URL`呢？事实上，这个操作同样已经在插件中自动完成。
 
+## 选项
 除此以外，插件提供了一些配置项：
 
 ```javascript
