@@ -24,7 +24,8 @@ export const copyCesium = (from: string, to: string, items: string[]) => {
         src: `${from}/Cesium.js`,
         dest: `${to}/`
       }
-    ]
+    ],
+    silent: true
   })
 }
 

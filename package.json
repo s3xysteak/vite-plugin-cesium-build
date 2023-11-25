@@ -18,6 +18,9 @@
   "homepage": "https://github.com/s3xysteak/vite-plugin-cesium-build",
   "bugs": "https://github.com/s3xysteak/vite-plugin-cesium-build/issues",
   "license": "MIT",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
   "files": [
     "dist"
   ],
@@ -31,7 +34,8 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build"
+    "build": "tsc && vite build",
+    "release": "pnpm build && npm publish"
   },
   "devDependencies": {
     "typescript": "^5.3.2",
