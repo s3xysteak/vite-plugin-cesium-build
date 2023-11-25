@@ -2,7 +2,8 @@
 
 English | [简体中文](/README.zh-CN.md)
 
-Provides a fast configuration solution for CesiumJS projects. It externalizes Cesium.js and automatically copies the four major libraries and core files of CesiumJS during the build process. **Super fast!** In the example project, it only takes 300ms to complete the build because the Cesium library is not involved in the core build.
+Provides a fast configuration solution for CesiumJS projects. It externalizes Cesium.js and automatically copies the four major libraries and core files of CesiumJS during the build process.  
+**Super fast!** In my laptop, the sample project only takes 300ms to complete the build because the Cesium library is not involved in the core build.
 
 ![Alt text](readme-image.png)
 
