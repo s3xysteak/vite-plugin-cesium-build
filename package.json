@@ -2,7 +2,22 @@
   "name": "vite-plugin-cesium-build",
   "private": false,
   "version": "0.0.1",
+  "description": "CesiumJS support for vite",
+  "author": "s3xysteak",
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/s3xysteak/vite-plugin-cesium-build"
+  },
+  "keywords": [
+    "vite",
+    "vite-plugin",
+    "cesium",
+    "CesiumJS"
+  ],
+  "homepage": "https://github.com/s3xysteak/vite-plugin-cesium-build",
+  "bugs": "https://github.com/s3xysteak/vite-plugin-cesium-build/issues",
+  "license": "MIT",
   "files": [
     "dist"
   ],
