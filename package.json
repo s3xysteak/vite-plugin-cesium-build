@@ -1,13 +1,13 @@
 {
   "name": "vite-plugin-cesium-build",
   "private": false,
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "CesiumJS support for vite",
   "author": "s3xysteak",
   "type": "module",
   "repository": {
     "type": "git",
-    "url": "https://github.com/s3xysteak/vite-plugin-cesium-build"
+    "url": "git+https://github.com/s3xysteak/vite-plugin-cesium-build.git"
   },
   "keywords": [
     "vite",
@@ -37,13 +37,13 @@
     "build": "tsc && vite build",
     "release": "pnpm build && npm publish"
   },
+  "dependencies": {
+    "vite-plugin-externals": "^0.6.2",
+    "vite-plugin-static-copy": "^0.17.1"
+  },
   "devDependencies": {
     "typescript": "^5.3.2",
     "vite": "^5.0.2",
     "vite-plugin-dts": "^3.6.3"
-  },
-  "dependencies": {
-    "vite-plugin-externals": "^0.6.2",
-    "vite-plugin-static-copy": "^1.0.0"
   }
 }
