@@ -8,7 +8,17 @@ import { insertToHtml } from './insertToHtml'
 
 type BuildCesiumOptions =
   | {
+      /**
+       * Specifies the location of the Cesium package folder
+       *
+       * @default 'node_modules/cesium/Build/Cesium'
+       */
       from?: string
+      /**
+       * Specifies the location of the built resources
+       *
+       * @default 'cesium-package'
+       */
       to?: string
     }
   | undefined
