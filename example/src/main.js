@@ -1,7 +1,12 @@
 import * as Cesium from 'cesium'
 import 'cesium/Build/Cesium/Widgets/widgets.css'
 
-const viewer = new Cesium.Viewer('app')
+import './main.css'
+
+const app = document.querySelector('#app')
+app.className = 'earth'
+
+const viewer = new Cesium.Viewer(app)
 
 viewer.camera.flyTo({
   destination: Cesium.Cartesian3.fromDegrees(120, 31.8, 100000)
