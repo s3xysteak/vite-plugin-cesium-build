@@ -44,7 +44,7 @@ Object.defineProperty(globalThis, 'CESIUM_BASE_URL', {
 
 插件会自动把上述代码添加到你的 `main.js` 或者 `main.ts` 文件中，这通常是项目入口文件的名称。
 
-> 如果你的项目没有这样的入口文件，请确保你已经在项目中自行设置了`CESIUM_BASE_URL` ，否则`Cesium`将会找不到资源文件！
+> :warning:如果你的项目没有这样的入口文件，请确保你已经在项目中自行设置了`CESIUM_BASE_URL` ，否则`Cesium`将会找不到资源文件！
 
 ## :wrench: 选项
 

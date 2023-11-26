@@ -42,9 +42,9 @@ Object.defineProperty(globalThis, 'CESIUM_BASE_URL', {
 })
 ```
 
-This plugin will add the code above to your `main.js` or `main.ts` which normally a name of entry file.
+This plugin will add the code above to your `main.js` or `main.ts`, which is normally the name of the entry file.
 
-> If your app do not have a entry file like that, make sure you have configure `CESIUM_BASE_URL` by yourself!
+> :warning:If your app does not have an entry file like that, make sure you have configured `CESIUM_BASE_URL` yourself!
 
 ## :wrench: Options
 
