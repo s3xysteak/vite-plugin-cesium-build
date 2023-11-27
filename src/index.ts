@@ -42,7 +42,10 @@ export const buildCesium = (
   _options: BuildCesiumOptions | undefined
 ): Plugin[] => {
   const options = Object.assign(
-    { from: 'node_modules/cesium/Build/Cesium', to: 'cesium-package' },
+    {
+      from: 'node_modules/cesium/Build/Cesium',
+      to: 'cesium-package'
+    },
     _options
   )
 
