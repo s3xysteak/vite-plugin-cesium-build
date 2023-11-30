@@ -2,7 +2,7 @@ import type { Plugin, ResolvedConfig } from 'vite'
 import type { BuildCesiumOptions } from './index'
 
 export const setBaseUrl = (options: BuildCesiumOptions): Plugin => {
-  const { to } = options
+  const { to, customCesiumBaseUrl } = options
   let base: ResolvedConfig['base']
 
   return {
@@ -20,7 +20,7 @@ export const setBaseUrl = (options: BuildCesiumOptions): Plugin => {
         });\n
         ` + code
 
-      return val
+      return customCesiumBaseUrl ? code : val
     }
   }
 }

@@ -19,6 +19,12 @@ export type BuildCesiumOptions = {
    * @default 'cesium-package'
    */
   to: string
+  /**
+   * Set `true` if you do not want to set `CESIUM_BASE_URL` automatically
+   * 
+   * @default false
+   */
+  customCesiumBaseUrl: boolean
 }
 
 export const copyCesium = (options: BuildCesiumOptions, items: string[]) => {
@@ -44,7 +50,8 @@ export const buildCesium = (
   const options = Object.assign(
     {
       from: 'node_modules/cesium/Build/Cesium',
-      to: 'cesium-package'
+      to: 'cesium-package',
+      customCesiumBaseUrl: false
     },
     _options
   )
