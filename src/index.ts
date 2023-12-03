@@ -21,13 +21,13 @@ export type BuildCesiumOptions = {
   to: string
   /**
    * Set `true` if you do not want to set `CESIUM_BASE_URL` automatically
-   * 
+   *
    * @default false
    */
   customCesiumBaseUrl: boolean
 }
 
-export const copyCesium = (options: BuildCesiumOptions, items: string[]) => {
+const copyCesium = (options: BuildCesiumOptions, items: string[]) => {
   const { from, to } = options
   return viteStaticCopy({
     targets: [
@@ -44,9 +44,7 @@ export const copyCesium = (options: BuildCesiumOptions, items: string[]) => {
   })
 }
 
-export const buildCesium = (
-  _options: BuildCesiumOptions | undefined
-): Plugin[] => {
+const buildCesium = (_options: BuildCesiumOptions | undefined): Plugin[] => {
   const options = Object.assign(
     {
       from: 'node_modules/cesium/Build/Cesium',
@@ -68,3 +66,5 @@ export const buildCesium = (
     setBaseUrl(options)
   ]
 }
+
+export default buildCesium

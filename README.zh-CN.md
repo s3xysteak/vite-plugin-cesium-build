@@ -22,12 +22,12 @@ pnpm add -D vite-plugin-cesium-build
 
 ```javascript
 import { defineConfig } from 'vite'
-import { buildCesium } from 'vite-plugin-cesium-build'
+import cesium from 'vite-plugin-cesium-build'
 
 export default defineConfig({
   plugins: [
     //...
-    buildCesium()
+    cesium()
   ]
 })
 ```
@@ -53,7 +53,7 @@ Object.defineProperty(globalThis, 'CESIUM_BASE_URL', {
 ```javascript
 export default defineConfig({
   plugins: [
-    buildCesium({
+    cesium({
       /**
        * 这指示了Cesium包文件夹的位置。
        * 这意味着将会从这个文件夹中获取CesiumJS的相关资源。
@@ -65,6 +65,11 @@ export default defineConfig({
        * 这意味着构建后资源会被放在/dist/cesium-package/下
        */
       to: 'cesium-package'
+
+      /**
+       * 设置为true时，插件不会自动设置CESIUM_BASE_URL的值
+       */
+      customCesiumBaseUrl: false
     })
   ]
 })
