@@ -22,12 +22,12 @@ Import it in `vite.config.js`
 
 ```javascript
 import { defineConfig } from 'vite'
-import { buildCesium } from 'vite-plugin-cesium-build'
+import cesium from 'vite-plugin-cesium-build'
 
 export default defineConfig({
   plugins: [
     //...
-    buildCesium()
+    cesium()
   ]
 })
 ```
@@ -53,7 +53,7 @@ In addition, the plugin provides some configuration options:
 ```javascript
 export default defineConfig({
   plugins: [
-    buildCesium({
+    cesium({
       /**
        * Specifies the location of the Cesium package folder
        * Which means the relevant resources of CesiumJS will be obtained from this folder
@@ -65,6 +65,11 @@ export default defineConfig({
        * Which means the built resources will be placed under /dist/cesium-package/
        */
       to: 'cesium-package'
+      
+      /**
+       * Set `true` if you do not want to set `CESIUM_BASE_URL` automatically
+       */
+      customCesiumBaseUrl: false
     })
   ]
 })
