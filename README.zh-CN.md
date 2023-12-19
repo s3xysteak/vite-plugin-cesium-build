@@ -62,7 +62,7 @@ export default defineConfig({
        * 这指示了构建后资源位置。
        * 这意味着构建后资源会被放在/dist/cesium-package/下
        */
-      to: 'cesium-package'
+      to: 'cesium-package',
 
       /**
        * 设置为true时，你需要自行设置CESIUM_BASE_URL

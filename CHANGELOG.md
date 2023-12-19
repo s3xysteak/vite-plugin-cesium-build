@@ -1,3 +1,8 @@
+## 2023.12.19
+
+### feat
+- Inject `index.html` to set `CESIUM_BASE_URL`.
+
 ## 2023.12.03 BREAK CHANGE!
 
 ### feat!

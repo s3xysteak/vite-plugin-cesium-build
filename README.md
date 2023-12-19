@@ -62,7 +62,7 @@ export default defineConfig({
        * Specifies the location of the built resources
        * Which means the built resources will be placed under /dist/cesium-package/
        */
-      to: 'cesium-package'
+      to: 'cesium-package',
       
       /**
        * If `true`, you need to manually set the CESIUM_BASE_URL.
