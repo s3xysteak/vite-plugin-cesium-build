@@ -1,8 +1,8 @@
 {
   "name": "vite-plugin-cesium-build",
   "private": false,
-  "version": "0.2.0",
-  "description": "CesiumJS support for vite",
+  "version": "0.2.1",
+  "description": "CesiumJS support for Vite",
   "author": "s3xysteak",
   "type": "module",
   "repository": {
@@ -33,7 +33,10 @@
     "require": "./dist/vite-plugin-cesium-build.umd.cjs"
   },
   "scripts": {
-    "dev": "vite",
+    "demo:dev": "cd demo && pnpm dev",
+    "demo:build": "cd demo && pnpm build",
+    "demo:preview": "cd demo && pnpm preview",
+    "dev": "pnpm build && node buildDev.js",
     "build": "tsc && vite build",
     "release": "pnpm build && npm publish"
   },
