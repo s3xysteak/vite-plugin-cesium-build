@@ -20,7 +20,7 @@ export type BuildCesiumOptions = {
    */
   to: string
   /**
-   * Set `true` if you do not want to set `CESIUM_BASE_URL` automatically
+   * If `true`, you need to manually set the `CESIUM_BASE_URL`
    *
    * @default false
    */

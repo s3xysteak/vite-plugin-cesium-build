@@ -2,9 +2,9 @@
 
 [English](README.md) | 简体中文
 
-为 CesiumJS 的项目提供一个自动化配置的解决方案。  
 这会将 `Cesium.js` 外部化，并在打包时自动拷贝 CesiumJS 的四大库和核心文件。
 
+- :+1: **DX** 对开发无影响
 - :sparkles: **TypeScript** 完全类型支持
 - :rocket: **非常快！** 在我的笔记本电脑中，示例项目仅需 300ms 完成打包，这是因为 Cesium 库不参与核心构建。
 
@@ -42,9 +42,7 @@ Object.defineProperty(globalThis, 'CESIUM_BASE_URL', {
 })
 ```
 
-插件会自动把上述代码添加到你的 `main.js` 或者 `main.ts` 文件中，这通常是项目入口文件的名称。
-
-> :warning:如果你的项目没有这样的入口文件，请确保你已经在项目中自行设置了`CESIUM_BASE_URL` ，否则`Cesium`将会找不到资源文件！
+插件会自动把上述代码添加到你的 `index.html` 中。
 
 ## :wrench: 选项
 
@@ -67,7 +65,7 @@ export default defineConfig({
       to: 'cesium-package'
 
       /**
-       * 设置为true时，插件不会自动设置CESIUM_BASE_URL的值
+       * 设置为true时，你需要自行设置CESIUM_BASE_URL
        */
       customCesiumBaseUrl: false
     })
