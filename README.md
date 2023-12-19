@@ -2,10 +2,10 @@
 
 English | [简体中文](/README.zh-CN.md)
 
-Provides a fast configuration solution for CesiumJS projects.  
 It externalizes `Cesium.js` and automatically copies the four major libraries and core files of CesiumJS during the build process.
 
-- :sparkles: **TypeScript** type support.
+- :+1: **DX** Zero impact on development
+- :sparkles: **TypeScript** Type support.
 - :rocket: **Super fast!** In my laptop, the sample project only takes 300ms to complete the build because the Cesium library is not involved in the core build.
 
 ![Alt text](readme-image.png)
@@ -42,9 +42,7 @@ Object.defineProperty(globalThis, 'CESIUM_BASE_URL', {
 })
 ```
 
-This plugin will add the code above to your `main.js` or `main.ts`, which is normally the name of the entry file.
-
-> :warning:If your app does not have an entry file like that, make sure you have configured `CESIUM_BASE_URL` yourself!
+This plugin will add the code above to your `index.html`  
 
 ## :wrench: Options
 
@@ -67,7 +65,7 @@ export default defineConfig({
       to: 'cesium-package'
       
       /**
-       * Set `true` if you do not want to set `CESIUM_BASE_URL` automatically
+       * If `true`, you need to manually set the CESIUM_BASE_URL.
        */
       customCesiumBaseUrl: false
     })

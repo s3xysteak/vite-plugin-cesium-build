@@ -10,17 +10,15 @@ export const setBaseUrl = (options: BuildCesiumOptions): Plugin => {
     configResolved(resolvedConfig) {
       base = resolvedConfig.base
     },
-    transform(code, id) {
-      if (!id.endsWith('/src/main.js') && !id.endsWith('/src/main.ts')) return
-
-      const val =
-        `
-        Object.defineProperty(globalThis, 'CESIUM_BASE_URL', {
-          value: '${base === '/' ? '' : base}/${to}/'
-        });\n
-        ` + code
-
-      return customCesiumBaseUrl ? code : val
-    }
+    transformIndexHtml: customCesiumBaseUrl
+      ? void 0
+      : () => [
+          {
+            tag: 'script',
+            children: `Object.defineProperty(globalThis,'CESIUM_BASE_URL',{value:'${
+              base === '/' ? '' : base
+            }/${to}/'})`
+          }
+        ]
   }
 }

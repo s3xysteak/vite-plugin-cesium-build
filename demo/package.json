@@ -9,10 +9,10 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "vite": "^5.0.4",
-    "vite-plugin-cesium-build": "^0.1.1"
+    "vite": "^5.0.10",
+    "vite-plugin-cesium-build": "^0.2.0"
   },
   "dependencies": {
-    "cesium": "^1.111.0"
+    "cesium": "^1.112.0"
   }
 }
