@@ -27,6 +27,10 @@ export type BuildCesiumOptions = {
   customCesiumBaseUrl: boolean
 }
 
+type Partial<T> = {
+  [K in keyof T]: T[K]
+}
+
 const copyCesium = (options: BuildCesiumOptions, items: string[]) => {
   const { from, to } = options
   return viteStaticCopy({
@@ -44,9 +48,6 @@ const copyCesium = (options: BuildCesiumOptions, items: string[]) => {
   })
 }
 
-type Partial<T> = {
-  [K in keyof T]: T[K]
-}
 const handleOptions = (
   options: Partial<BuildCesiumOptions> | undefined
 ): BuildCesiumOptions => {
@@ -63,9 +64,9 @@ const handleOptions = (
   }
 }
 
-const installCesium = (
+export default function (
   _options: Partial<BuildCesiumOptions> | undefined
-): Plugin[] => {
+): Plugin[] {
   const options = handleOptions(_options)
 
   return [
@@ -80,5 +81,3 @@ const installCesium = (
     setBaseUrl(options)
   ]
 }
-
-export default installCesium
