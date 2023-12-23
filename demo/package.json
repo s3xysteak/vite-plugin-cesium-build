@@ -10,7 +10,7 @@
   },
   "devDependencies": {
     "vite": "^5.0.10",
-    "vite-plugin-cesium-build": "^0.2.0"
+    "vite-plugin-cesium-build": "^0.2.1"
   },
   "dependencies": {
     "cesium": "^1.112.0"

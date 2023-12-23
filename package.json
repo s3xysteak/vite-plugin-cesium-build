@@ -1,7 +1,7 @@
 {
   "name": "vite-plugin-cesium-build",
   "private": false,
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "CesiumJS support for Vite",
   "author": "s3xysteak",
   "type": "module",
@@ -45,8 +45,8 @@
     "vite-plugin-static-copy": "^0.17.1"
   },
   "devDependencies": {
-    "typescript": "^5.3.2",
-    "vite": "^5.0.4",
+    "typescript": "^5.3.3",
+    "vite": "^5.0.10",
     "vite-plugin-dts": "^3.6.4"
   }
 }

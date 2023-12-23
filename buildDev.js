@@ -20,3 +20,5 @@ const copyFiles = (sourceDir, targetDir) => {
 }
 
 copyFiles(sourceDir, targetDir)
+
+console.log('\x1B[34m%s\x1B[39m', '\u2714 dist copy successfully!')
