@@ -44,7 +44,13 @@ const copyCesium = (options: BuildCesiumOptions, items: string[]) => {
   })
 }
 
-const buildCesium = (_options: BuildCesiumOptions | undefined): Plugin[] => {
+type Partial<T> = {
+  [K in keyof T]: T[K]
+}
+
+const installCesium = (
+  _options: Partial<BuildCesiumOptions> | undefined
+): Plugin[] => {
   const options = Object.assign(
     {
       from: 'node_modules/cesium/Build/Cesium',
@@ -67,4 +73,4 @@ const buildCesium = (_options: BuildCesiumOptions | undefined): Plugin[] => {
   ]
 }
 
-export default buildCesium
+export default installCesium
