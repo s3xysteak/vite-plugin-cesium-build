@@ -47,18 +47,26 @@ const copyCesium = (options: BuildCesiumOptions, items: string[]) => {
 type Partial<T> = {
   [K in keyof T]: T[K]
 }
+const handleOptions = (
+  options: Partial<BuildCesiumOptions> | undefined
+): BuildCesiumOptions => {
+  const {
+    from = 'node_modules/cesium/Build/Cesium',
+    to = 'cesium-package',
+    customCesiumBaseUrl = false
+  } = options ?? {}
+
+  return {
+    from,
+    to,
+    customCesiumBaseUrl
+  }
+}
 
 const installCesium = (
   _options: Partial<BuildCesiumOptions> | undefined
 ): Plugin[] => {
-  const options = Object.assign(
-    {
-      from: 'node_modules/cesium/Build/Cesium',
-      to: 'cesium-package',
-      customCesiumBaseUrl: false
-    },
-    _options
-  )
+  const options = handleOptions(_options)
 
   return [
     viteExternalsPlugin(
