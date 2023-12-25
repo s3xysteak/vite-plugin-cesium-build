@@ -1,5 +1,5 @@
-import * as fs from 'fs'
-import * as path from 'path'
+import * as fs from 'node:fs'
+import * as path from 'node:path'
 
 const sourceDir = './dist'
 const targetDir = './demo/node_modules/vite-plugin-cesium-build/dist'
