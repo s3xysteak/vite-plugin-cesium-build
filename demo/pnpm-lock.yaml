@@ -17,8 +17,8 @@ devDependencies:
     specifier: ^5.0.10
     version: 5.0.10
   vite-plugin-cesium-build:
-    specifier: ^0.2.2
-    version: 0.2.2(vite@5.0.10)
+    specifier: ^0.2.4
+    version: 0.2.4(vite@5.0.10)
 
 packages:
 
@@ -860,8 +860,8 @@ packages:
     resolution: {integrity: sha512-HXgFDgDommxn5/bIv0cnQZsPhHDA90NPHD6+c/v21U5+Sx5hoP8+dP9IZXBU1gIfvdRfhG8cel9QNPeionfcCQ==}
     dev: false
 
-  /vite-plugin-cesium-build@0.2.2(vite@5.0.10):
-    resolution: {integrity: sha512-9qWYTVXl2LJ58TuIVPfLLLyennt0B80zN1ABnru2lJfwFQk3UlZa1jT5f4HchLT/ay3ExZzV4/LFxbgmRwzl6w==}
+  /vite-plugin-cesium-build@0.2.4(vite@5.0.10):
+    resolution: {integrity: sha512-eJ0QVe/OKFU1VEJLOqp+SWbqO4atvw2AedfZlS+qlcln3RllDhwbzpoPFZKz1myv95udKBIYsEb2iqgGKoKCxQ==}
     dependencies:
       vite-plugin-externals: 0.6.2(vite@5.0.10)
       vite-plugin-static-copy: 0.17.1(vite@5.0.10)
