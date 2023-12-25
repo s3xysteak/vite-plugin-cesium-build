@@ -27,10 +27,6 @@ export type BuildCesiumOptions = {
   customCesiumBaseUrl: boolean
 }
 
-type Partial<T> = {
-  [K in keyof T]: T[K]
-}
-
 const copyCesium = (options: BuildCesiumOptions, items: string[]) => {
   const { from, to } = options
   return viteStaticCopy({
@@ -64,10 +60,10 @@ const handleOptions = (
   }
 }
 
-export default function (
-  _options: Partial<BuildCesiumOptions> | undefined
+export default function pluginEntry(
+  pluginOptions: Partial<BuildCesiumOptions> | undefined
 ): Plugin[] {
-  const options = handleOptions(_options)
+  const options = handleOptions(pluginOptions)
 
   return [
     viteExternalsPlugin(
