@@ -1,3 +1,10 @@
+## 2023-12-25
+
+### feat
+
+- Format path.
+- Better `base` option support
+
 ## 2023-12-23
 
 ### feat
