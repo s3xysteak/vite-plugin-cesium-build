@@ -10,12 +10,15 @@ dependencies:
     version: 1.112.0
 
 devDependencies:
+  typescript:
+    specifier: ^5.3.3
+    version: 5.3.3
   vite:
     specifier: ^5.0.10
     version: 5.0.10
   vite-plugin-cesium-build:
-    specifier: ^0.2.1
-    version: 0.2.1(vite@5.0.10)
+    specifier: ^0.2.2
+    version: 0.2.2(vite@5.0.10)
 
 packages:
 
@@ -838,6 +841,12 @@ packages:
     resolution: {integrity: sha512-AEYxH93jGFPn/a2iVAwW87VuUIkR1FVUKB77NwMF7nBTDkDrrT/Hpt/IrCJ0QXhW27jTBDcf5ZY7w6RiqTMw2Q==}
     dev: false
 
+  /typescript@5.3.3:
+    resolution: {integrity: sha512-pXWcraxM0uxAS+tN0AG/BF2TyqmHO014Z070UsJ+pFvYuRSq8KH8DmWpnbXe0pEPDHXZV3FcAbJkijJ5oNEnWw==}
+    engines: {node: '>=14.17'}
+    hasBin: true
+    dev: true
+
   /undici-types@5.26.5:
     resolution: {integrity: sha512-JlCMO+ehdEIKqlFxk6IfVoAUVmgz7cU7zD/h9XZ0qzeosSHmUJVOzSQvvYSYWXkFXC+IfLKSIffhv0sVZup6pA==}
     dev: false
@@ -851,8 +860,8 @@ packages:
     resolution: {integrity: sha512-HXgFDgDommxn5/bIv0cnQZsPhHDA90NPHD6+c/v21U5+Sx5hoP8+dP9IZXBU1gIfvdRfhG8cel9QNPeionfcCQ==}
     dev: false
 
-  /vite-plugin-cesium-build@0.2.1(vite@5.0.10):
-    resolution: {integrity: sha512-eG5PfoHC+GxfJRtmdAVgFbyExg2MrTahsSQd4zGcS4xO51Uhi/2rba2vXk/rZscmcfQIrjarcVX7WQx1nCE2yQ==}
+  /vite-plugin-cesium-build@0.2.2(vite@5.0.10):
+    resolution: {integrity: sha512-9qWYTVXl2LJ58TuIVPfLLLyennt0B80zN1ABnru2lJfwFQk3UlZa1jT5f4HchLT/ay3ExZzV4/LFxbgmRwzl6w==}
     dependencies:
       vite-plugin-externals: 0.6.2(vite@5.0.10)
       vite-plugin-static-copy: 0.17.1(vite@5.0.10)

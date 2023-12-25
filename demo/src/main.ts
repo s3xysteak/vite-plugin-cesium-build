@@ -3,7 +3,7 @@ import 'cesium/Build/Cesium/Widgets/widgets.css'
 
 import './main.css'
 
-const app = document.querySelector('#app')
+const app = document.querySelector('#app') as HTMLElement
 app.className = 'earth'
 
 const viewer = new Cesium.Viewer(app)
