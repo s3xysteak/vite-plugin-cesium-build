@@ -14,7 +14,7 @@ export const insertToHtml = (options: BuildCesiumOptions): Plugin => {
     transformIndexHtml: () => [
       {
         tag: 'script',
-        attrs: { src: `${base === '/' ? '' : base}/${to}/Cesium.js` }
+        attrs: { src: `${base}${to}/Cesium.js` }
       }
     ]
   }

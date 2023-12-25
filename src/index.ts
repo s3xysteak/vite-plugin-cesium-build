@@ -54,8 +54,8 @@ const handleOptions = (
   } = options ?? {}
 
   return {
-    from,
-    to,
+    from: from.replace(/[\/\\]$/, ''),
+    to: to.replace(/^[\/\\]|[\/\\]$/, ''),
     customCesiumBaseUrl
   }
 }
