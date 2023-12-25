@@ -61,7 +61,7 @@ const handleOptions = (
 }
 
 export default function pluginEntry(
-  pluginOptions: Partial<BuildCesiumOptions> | undefined
+  pluginOptions?: Partial<BuildCesiumOptions>
 ): Plugin[] {
   const options = handleOptions(pluginOptions)
 
