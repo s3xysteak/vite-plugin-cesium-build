@@ -32,8 +32,8 @@ export default defineConfig({
 })
 ```
 
-结束了？结束了！你已经完成了 CesiumJS 的全部配置！接下来只需要像往常一样开发与打包！  
-熟悉的 CesiumJS 的朋友可能会问，在哪里配置`window.CESIUM_BASE_URL`呢？事实上，这个操作同样已经在插件中自动完成。
+你已经完成了 CesiumJS 的全部配置！接下来只需要像往常一样开发与打包！  
+默认情况下，插件会自动把下面的代码添加到你的 `index.html` 中：
 
 ```javascript
 // Customize variable 'to' in options
@@ -42,7 +42,7 @@ Object.defineProperty(globalThis, 'CESIUM_BASE_URL', {
 })
 ```
 
-插件会自动把上述代码添加到你的 `index.html` 中。
+如果要阻止这个默认行为，见Options中的`customCesiumBaseUrl`。
 
 ## :wrench: 选项
 
@@ -72,3 +72,7 @@ export default defineConfig({
   ]
 })
 ```
+
+## 其他
+
+如果你是Vue用户，或许可以尝试一下[cesium-use](https://s3xysteak.github.io/cesium-use/) !
