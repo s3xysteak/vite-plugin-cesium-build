@@ -32,8 +32,8 @@ export default defineConfig({
 })
 ```
 
-Done? Yes, that's it! You have completed the entire configuration for CesiumJS! Now you can continue development and build as usual!  
-For those familiar with CesiumJS, you may wonder where to configure `window.CESIUM_BASE_URL`. In fact, this operation is also automatically handled by the plugin.
+You have completed the entire configuration for CesiumJS! Now you can continue development and build as usual!  
+By default, This plugin will automatically add the code to your `index.html`:
 
 ```javascript
 // Customize variable 'to' in options
@@ -42,7 +42,7 @@ Object.defineProperty(globalThis, 'CESIUM_BASE_URL', {
 })
 ```
 
-This plugin will add the code above to your `index.html`  
+To prevent it, see `customCesiumBaseUrl` in Options.
 
 ## :wrench: Options
 
@@ -72,3 +72,6 @@ export default defineConfig({
   ]
 })
 ```
+
+## Others
+If you are a Vue user, maybe try [cesium-use](https://s3xysteak.github.io/cesium-use/) !
