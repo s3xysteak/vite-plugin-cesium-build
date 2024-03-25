@@ -36,7 +36,7 @@
     "demo:dev": "cd demo && pnpm dev",
     "demo:build": "cd demo && pnpm build",
     "demo:preview": "cd demo && pnpm preview",
-    "dev": "pnpm build && node ./scripts/buildDev.js && pnpm demo:dev",
+    "dev": "pnpm build && esno ./scripts/buildDev.ts && pnpm demo:dev",
     "build": "tsc && vite build",
     "release": "pnpm build && npm publish",
     "lint": "eslint .",
@@ -48,7 +48,10 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.9.0",
+    "@types/node": "^20.11.30",
+    "consola": "^3.2.3",
     "eslint": "^8.57.0",
+    "esno": "^4.7.0",
     "typescript": "^5.4.3",
     "vite": "^5.2.6",
     "vite-plugin-dts": "^3.7.3"

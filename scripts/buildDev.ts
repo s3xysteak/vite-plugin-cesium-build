@@ -1,10 +1,11 @@
 import * as fs from 'node:fs'
 import * as path from 'node:path'
+import { consola } from 'consola'
 
 const sourceDir = './dist'
 const targetDir = './demo/node_modules/vite-plugin-cesium-build/dist'
 
-function copyFiles(sourceDir, targetDir) {
+function copyFiles(sourceDir: string, targetDir: string) {
   const files = fs.readdirSync(sourceDir)
 
   files.forEach((file) => {
@@ -21,4 +22,4 @@ function copyFiles(sourceDir, targetDir) {
 
 copyFiles(sourceDir, targetDir)
 
-console.log('\x1B[34m%s\x1B[39m', '\u2714 dist copy successfully!')
+consola.info('dist copy successfully!')
