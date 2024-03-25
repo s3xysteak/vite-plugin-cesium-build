@@ -7,16 +7,16 @@ export default defineConfig({
     lib: {
       entry: './src/index.ts',
       name: 'vite-plugin-cesium-build',
-      fileName: 'vite-plugin-cesium-build'
+      fileName: 'vite-plugin-cesium-build',
     },
     rollupOptions: {
       external: ['vite-plugin-externals', 'vite-plugin-static-copy'],
       output: {
         globals: {
           'vite-plugin-externals': 'vitePluginStaticCopy',
-          'vite-plugin-static-copy': 'vitePluginExternals'
-        }
-      }
-    }
-  }
+          'vite-plugin-static-copy': 'vitePluginExternals',
+        },
+      },
+    },
+  },
 })

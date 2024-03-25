@@ -32,7 +32,7 @@ export default defineConfig({
 })
 ```
 
-结束了？结束了！你已经完成了 CesiumJS 的全部配置！接下来只需要像往常一样开发与打包！  
+结束了？结束了！你已经完成了 CesiumJS 的全部配置！接下来只需要像往常一样开发与打包！
 熟悉的 CesiumJS 的朋友可能会问，在哪里配置`window.CESIUM_BASE_URL`呢？事实上，这个操作同样已经在插件中自动完成。
 
 ```javascript

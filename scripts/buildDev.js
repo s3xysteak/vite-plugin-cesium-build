@@ -4,10 +4,10 @@ import * as path from 'node:path'
 const sourceDir = './dist'
 const targetDir = './demo/node_modules/vite-plugin-cesium-build/dist'
 
-const copyFiles = (sourceDir, targetDir) => {
+function copyFiles(sourceDir, targetDir) {
   const files = fs.readdirSync(sourceDir)
 
-  files.forEach(file => {
+  files.forEach((file) => {
     const sourcePath = path.join(sourceDir, file)
     const targetPath = path.join(targetDir, file)
 

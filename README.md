@@ -32,7 +32,7 @@ export default defineConfig({
 })
 ```
 
-Done? Yes, that's it! You have completed the entire configuration for CesiumJS! Now you can continue development and build as usual!  
+Done? Yes, that's it! You have completed the entire configuration for CesiumJS! Now you can continue development and build as usual!
 For those familiar with CesiumJS, you may wonder where to configure `window.CESIUM_BASE_URL`. In fact, this operation is also automatically handled by the plugin.
 
 ```javascript
@@ -42,7 +42,7 @@ Object.defineProperty(globalThis, 'CESIUM_BASE_URL', {
 })
 ```
 
-This plugin will add the code above to your `index.html`  
+This plugin will add the code above to your `index.html`
 
 ## :wrench: Options
 
@@ -63,7 +63,7 @@ export default defineConfig({
        * Which means the built resources will be placed under /dist/cesium-package/
        */
       to: 'cesium-package',
-      
+
       /**
        * If `true`, you need to manually set the CESIUM_BASE_URL.
        */

@@ -6,7 +6,7 @@ import { viteExternalsPlugin } from 'vite-plugin-externals'
 import { setBaseUrl } from './setBaseUrl'
 import { insertToHtml } from './insertToHtml'
 
-export type BuildCesiumOptions = {
+export interface BuildCesiumOptions {
   /**
    * Specifies the location of the Cesium package folder
    *
@@ -27,41 +27,39 @@ export type BuildCesiumOptions = {
   customCesiumBaseUrl: boolean
 }
 
-const copyCesium = (options: BuildCesiumOptions, items: string[]) => {
+function copyCesium(options: BuildCesiumOptions, items: string[]) {
   const { from, to } = options
   return viteStaticCopy({
     targets: [
       ...items.map(item => ({
         src: `${from}/${item}/*`,
-        dest: `${to}/${item}/`
+        dest: `${to}/${item}/`,
       })),
       {
         src: `${from}/Cesium.js`,
-        dest: `${to}/`
-      }
+        dest: `${to}/`,
+      },
     ],
-    silent: true
+    silent: true,
   })
 }
 
-const handleOptions = (
-  options: Partial<BuildCesiumOptions> | undefined
-): BuildCesiumOptions => {
+function handleOptions(options: Partial<BuildCesiumOptions> | undefined): BuildCesiumOptions {
   const {
     from = 'node_modules/cesium/Build/Cesium',
     to = 'cesium-package',
-    customCesiumBaseUrl = false
+    customCesiumBaseUrl = false,
   } = options ?? {}
 
   return {
     from: from.replace(/[\/\\]$/, ''),
     to: to.replace(/^[\/\\]|[\/\\]$/, ''),
-    customCesiumBaseUrl
+    customCesiumBaseUrl,
   }
 }
 
 export default function pluginEntry(
-  pluginOptions?: Partial<BuildCesiumOptions>
+  pluginOptions?: Partial<BuildCesiumOptions>,
 ): Plugin[] {
   const options = handleOptions(pluginOptions)
 
@@ -69,11 +67,11 @@ export default function pluginEntry(
     viteExternalsPlugin(
       { cesium: 'Cesium' },
       {
-        disableInServe: true
-      }
+        disableInServe: true,
+      },
     ),
     ...copyCesium(options, ['Assets', 'ThirdParty', 'Widgets', 'Workers']),
     insertToHtml(options),
-    setBaseUrl(options)
+    setBaseUrl(options),
   ]
 }

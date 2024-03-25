@@ -1,50 +1,54 @@
 {
   "name": "vite-plugin-cesium-build",
-  "private": false,
+  "type": "module",
   "version": "0.2.4",
+  "private": false,
   "description": "CesiumJS support for Vite",
   "author": "s3xysteak",
-  "type": "module",
+  "license": "MIT",
+  "homepage": "https://github.com/s3xysteak/vite-plugin-cesium-build",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/s3xysteak/vite-plugin-cesium-build.git"
   },
+  "bugs": "https://github.com/s3xysteak/vite-plugin-cesium-build/issues",
   "keywords": [
     "vite",
     "vite-plugin",
     "cesium",
     "CesiumJS"
   ],
-  "homepage": "https://github.com/s3xysteak/vite-plugin-cesium-build",
-  "bugs": "https://github.com/s3xysteak/vite-plugin-cesium-build/issues",
-  "license": "MIT",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
-  "files": [
-    "dist"
-  ],
-  "main": "./dist/vite-plugin-cesium-build.umd.cjs",
-  "module": "./dist/vite-plugin-cesium-build.js",
-  "types": "./dist/index.d.ts",
   "exports": {
     "types": "./dist/index.d.ts",
     "import": "./dist/vite-plugin-cesium-build.js",
     "require": "./dist/vite-plugin-cesium-build.umd.cjs"
   },
+  "main": "./dist/vite-plugin-cesium-build.umd.cjs",
+  "module": "./dist/vite-plugin-cesium-build.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "demo:dev": "cd demo && pnpm dev",
     "demo:build": "cd demo && pnpm build",
     "demo:preview": "cd demo && pnpm preview",
     "dev": "pnpm build && node ./scripts/buildDev.js && pnpm demo:dev",
     "build": "tsc && vite build",
-    "release": "pnpm build && npm publish"
+    "release": "pnpm build && npm publish",
+    "lint": "eslint .",
+    "lint-fix": "eslint . --fix"
   },
   "dependencies": {
     "vite-plugin-externals": "^0.6.2",
     "vite-plugin-static-copy": "^0.17.1"
   },
   "devDependencies": {
+    "@antfu/eslint-config": "^2.9.0",
+    "eslint": "^8.57.0",
     "typescript": "^5.3.3",
     "vite": "^5.0.10",
     "vite-plugin-dts": "^3.7.0"
