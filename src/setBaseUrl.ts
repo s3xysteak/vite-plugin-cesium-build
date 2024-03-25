@@ -1,7 +1,7 @@
 import type { Plugin, ResolvedConfig } from 'vite'
-import type { BuildCesiumOptions } from './index'
+import type { BuildCesiumOptions } from '.'
 
-export const setBaseUrl = (options: BuildCesiumOptions): Plugin => {
+export function setBaseUrl(options: BuildCesiumOptions): Plugin {
   const { to, customCesiumBaseUrl } = options
   let base: ResolvedConfig['base']
 
@@ -15,8 +15,8 @@ export const setBaseUrl = (options: BuildCesiumOptions): Plugin => {
       : () => [
           {
             tag: 'script',
-            children: `Object.defineProperty(globalThis,'CESIUM_BASE_URL',{value:'${base}${to}/'})`
-          }
-        ]
+            children: `Object.defineProperty(globalThis,'CESIUM_BASE_URL',{value:'${base}${to}/'})`,
+          },
+        ],
   }
 }

@@ -1,7 +1,7 @@
 import type { Plugin, ResolvedConfig } from 'vite'
-import type { BuildCesiumOptions } from './index'
+import type { BuildCesiumOptions } from '.'
 
-export const insertToHtml = (options: BuildCesiumOptions): Plugin => {
+export function insertToHtml(options: BuildCesiumOptions): Plugin {
   const { to } = options
   let base: ResolvedConfig['base']
 
@@ -14,8 +14,8 @@ export const insertToHtml = (options: BuildCesiumOptions): Plugin => {
     transformIndexHtml: () => [
       {
         tag: 'script',
-        attrs: { src: `${base}${to}/Cesium.js` }
-      }
-    ]
+        attrs: { src: `${base}${to}/Cesium.js` },
+      },
+    ],
   }
 }

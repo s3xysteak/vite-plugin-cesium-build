@@ -9,5 +9,5 @@ app.className = 'earth'
 const viewer = new Cesium.Viewer(app)
 
 viewer.camera.flyTo({
-  destination: Cesium.Cartesian3.fromDegrees(120, 31.8, 100_000)
+  destination: Cesium.Cartesian3.fromDegrees(120, 31.8, 100_000),
 })

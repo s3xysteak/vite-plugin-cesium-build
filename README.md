@@ -32,7 +32,7 @@ export default defineConfig({
 })
 ```
 
-You have completed the entire configuration for CesiumJS! Now you can continue development and build as usual!  
+You have completed the entire configuration for CesiumJS! Now you can continue development and build as usual!
 By default, This plugin will automatically add the code to your `index.html`:
 
 ```javascript
@@ -63,7 +63,7 @@ export default defineConfig({
        * Which means the built resources will be placed under /dist/cesium-package/
        */
       to: 'cesium-package',
-      
+
       /**
        * If `true`, you need to manually set the CESIUM_BASE_URL.
        */

@@ -32,7 +32,7 @@ export default defineConfig({
 })
 ```
 
-你已经完成了 CesiumJS 的全部配置！接下来只需要像往常一样开发与打包！  
+你已经完成了 CesiumJS 的全部配置！接下来只需要像往常一样开发与打包！
 默认情况下，插件会自动把下面的代码添加到你的 `index.html` 中：
 
 ```javascript
