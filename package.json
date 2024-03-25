@@ -23,11 +23,11 @@
   },
   "exports": {
     "types": "./dist/index.d.ts",
-    "import": "./dist/vite-plugin-cesium-build.js",
-    "require": "./dist/vite-plugin-cesium-build.umd.cjs"
+    "import": "./dist/index.mjs",
+    "require": "./dist/index.cjs"
   },
-  "main": "./dist/vite-plugin-cesium-build.umd.cjs",
-  "module": "./dist/vite-plugin-cesium-build.js",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "files": [
     "dist"
@@ -37,12 +37,14 @@
     "demo:build": "cd demo && pnpm build",
     "demo:preview": "cd demo && pnpm preview",
     "dev": "pnpm build && esno ./scripts/buildDev.ts && pnpm demo:dev",
-    "build": "tsc && vite build",
+    "build": "tsc && unbuild",
+    "build-only": "unbuild",
     "release": "pnpm build && npm publish",
     "lint": "eslint .",
     "lint-fix": "eslint . --fix"
   },
   "dependencies": {
+    "vite": "^5.2.6",
     "vite-plugin-externals": "^0.6.2",
     "vite-plugin-static-copy": "^0.17.1"
   },
@@ -53,7 +55,6 @@
     "eslint": "^8.57.0",
     "esno": "^4.7.0",
     "typescript": "^5.4.3",
-    "vite": "^5.2.6",
-    "vite-plugin-dts": "^3.7.3"
+    "unbuild": "^2.0.0"
   }
 }

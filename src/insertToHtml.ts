@@ -1,5 +1,5 @@
 import type { Plugin, ResolvedConfig } from 'vite'
-import type { BuildCesiumOptions } from './index'
+import type { BuildCesiumOptions } from '.'
 
 export function insertToHtml(options: BuildCesiumOptions): Plugin {
   const { to } = options
