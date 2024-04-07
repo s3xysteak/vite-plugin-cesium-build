@@ -1,5 +1,6 @@
 import { type Target, viteStaticCopy } from 'vite-plugin-static-copy'
 import type { BuildCesiumOptions } from './resolveOptions'
+import { toArray } from './utils'
 
 export function copyCesium(options: BuildCesiumOptions, items: string[], customCopyList: Target | Target[] = []) {
   const { from, to } = options
@@ -14,8 +15,4 @@ export function copyCesium(options: BuildCesiumOptions, items: string[], customC
     ],
     silent: true,
   })
-}
-
-function toArray<T>(src: T | T[]) {
-  return Array.isArray(src) ? src : [src]
 }

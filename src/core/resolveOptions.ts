@@ -12,11 +12,11 @@ export interface BuildCesiumOptions {
    */
   to: string
   /**
-   * If `true`, you need to manually set the `CESIUM_BASE_URL`
+   * If `true`, you need to manually set the `CESIUM_BASE_URL`. Or you can directly set the custom Cesium base URL.
    *
    * @default false
    */
-  customCesiumBaseUrl: boolean
+  customCesiumBaseUrl: boolean | string
 }
 
 export function resolveOptions(options: Partial<BuildCesiumOptions> = {}, src: string): BuildCesiumOptions {
