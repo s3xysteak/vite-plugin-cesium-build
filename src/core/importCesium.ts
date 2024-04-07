@@ -1,12 +1,12 @@
 import type { Plugin, ResolvedConfig } from 'vite'
-import type { BuildCesiumOptions } from '.'
+import type { BuildCesiumOptions } from './resolveOptions'
 
-export function insertToHtml(options: BuildCesiumOptions): Plugin {
+export function importCesium(options: BuildCesiumOptions): Plugin {
   const { to } = options
   let base: ResolvedConfig['base']
 
   return {
-    name: 'vite-plugin-cesium-build:insertToHtml',
+    name: 'vite-plugin-cesium-build:importCesium',
     apply: 'build',
     configResolved(resolvedConfig) {
       base = resolvedConfig.base

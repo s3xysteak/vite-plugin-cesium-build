@@ -1,5 +1,5 @@
 import type { Plugin, ResolvedConfig } from 'vite'
-import type { BuildCesiumOptions } from '.'
+import type { BuildCesiumOptions } from './resolveOptions'
 
 export function setBaseUrl(options: BuildCesiumOptions): Plugin {
   const { to, customCesiumBaseUrl } = options
