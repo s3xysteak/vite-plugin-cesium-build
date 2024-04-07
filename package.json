@@ -44,17 +44,17 @@
     "lint-fix": "eslint . --fix"
   },
   "dependencies": {
-    "vite": "^5.2.6",
+    "vite": "^5.2.8",
     "vite-plugin-externals": "^0.6.2",
     "vite-plugin-static-copy": "^0.17.1"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^2.9.0",
-    "@types/node": "^20.11.30",
+    "@antfu/eslint-config": "^2.12.2",
+    "@types/node": "^20.12.5",
     "consola": "^3.2.3",
     "eslint": "^8.57.0",
     "esno": "^4.7.0",
-    "typescript": "^5.4.3",
+    "typescript": "^5.4.4",
     "unbuild": "^2.0.0"
   }
 }
