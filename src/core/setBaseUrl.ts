@@ -19,9 +19,16 @@ export function setBaseUrl(options: BuildCesiumOptions): Plugin {
             children: `Object.defineProperty(
               globalThis,
               'CESIUM_BASE_URL',
-              { value: '${isString(customCesiumBaseUrl) ? customCesiumBaseUrl : `${base}${to}/`}' }
+              { value: ${toUrlValue(customCesiumBaseUrl, { base, to })} }
             )`,
           },
         ],
   }
+}
+
+export function toUrlValue(
+  src: BuildCesiumOptions['customCesiumBaseUrl'],
+  { base, to }: { base: ResolvedConfig['base'], to: BuildCesiumOptions['to'] },
+) {
+  return `'${isString(src) ? src : `${base}${to}/`}'`
 }

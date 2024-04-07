@@ -41,6 +41,8 @@
     "dev": "pnpm build && esno ./scripts/buildDev.ts && pnpm demo:dev",
     "build": "tsc && unbuild",
     "build-only": "unbuild",
+    "test": "vitest",
+    "test:once": "vitest run",
     "release": "pnpm build && npm publish",
     "lint": "eslint .",
     "lint-fix": "eslint . --fix"
