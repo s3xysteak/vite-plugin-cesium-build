@@ -26,6 +26,11 @@
       "types": "./dist/cesium.d.ts",
       "import": "./dist/cesium.mjs",
       "require": "./dist/cesium.cjs"
+    },
+    "./engine": {
+      "types": "./dist/engine.d.ts",
+      "import": "./dist/engine.mjs",
+      "require": "./dist/engine.cjs"
     }
   },
   "main": "./dist/cesium.cjs",
