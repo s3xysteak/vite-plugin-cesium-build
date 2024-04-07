@@ -43,7 +43,7 @@
     "build-only": "unbuild",
     "test": "vitest",
     "test:once": "vitest run",
-    "release": "pnpm build && npm publish",
+    "release": "esno ./scripts/release.ts",
     "lint": "eslint .",
     "lint-fix": "eslint . --fix"
   },
