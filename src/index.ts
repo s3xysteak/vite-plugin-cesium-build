@@ -27,6 +27,26 @@ export interface BuildCesiumOptions {
   customCesiumBaseUrl: boolean
 }
 
+function pluginEntry(
+  pluginOptions?: Partial<BuildCesiumOptions>,
+): Plugin[] {
+  const options = handleOptions(pluginOptions)
+
+  return [
+    viteExternalsPlugin(
+      { cesium: 'Cesium' },
+      {
+        disableInServe: true,
+      },
+    ),
+    ...copyCesium(options, ['Assets', 'ThirdParty', 'Widgets', 'Workers']),
+    insertToHtml(options),
+    setBaseUrl(options),
+  ]
+}
+
+export default pluginEntry
+
 function copyCesium(options: BuildCesiumOptions, items: string[]) {
   const { from, to } = options
   return viteStaticCopy({
@@ -44,34 +64,16 @@ function copyCesium(options: BuildCesiumOptions, items: string[]) {
   })
 }
 
-function handleOptions(options: Partial<BuildCesiumOptions> | undefined): BuildCesiumOptions {
+function handleOptions(options: Partial<BuildCesiumOptions> = {}): BuildCesiumOptions {
   const {
     from = 'node_modules/cesium/Build/Cesium',
     to = 'cesium-package',
     customCesiumBaseUrl = false,
-  } = options ?? {}
+  } = options
 
   return {
     from: from.replace(/[\/\\]$/, ''),
     to: to.replace(/^[\/\\]|[\/\\]$/, ''),
     customCesiumBaseUrl,
   }
-}
-
-export default function pluginEntry(
-  pluginOptions?: Partial<BuildCesiumOptions>,
-): Plugin[] {
-  const options = handleOptions(pluginOptions)
-
-  return [
-    viteExternalsPlugin(
-      { cesium: 'Cesium' },
-      {
-        disableInServe: true,
-      },
-    ),
-    ...copyCesium(options, ['Assets', 'ThirdParty', 'Widgets', 'Workers']),
-    insertToHtml(options),
-    setBaseUrl(options),
-  ]
 }
