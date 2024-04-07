@@ -4,6 +4,8 @@ English | [简体中文](/README.zh-CN.md)
 
 It externalizes `Cesium.js` and automatically copies the four major libraries and core files of CesiumJS during the build process.
 
+It also support [@cesium/engine](https://community.cesium.com/t/cesium-engine-and-cesium-widgets-are-now-available-for-testing/20898) !
+
 - :+1: **DX** Zero impact on development
 - :sparkles: **TypeScript** Type support.
 - :rocket: **Super fast!** In my laptop, the sample project only takes 300ms to complete the build because the Cesium library is not involved in the core build.
@@ -23,6 +25,7 @@ Import it in `vite.config.js`
 ```javascript
 import { defineConfig } from 'vite'
 import cesium from 'vite-plugin-cesium-build'
+// import cesium from 'vite-plugin-cesium-build/engine'
 
 export default defineConfig({
   plugins: [

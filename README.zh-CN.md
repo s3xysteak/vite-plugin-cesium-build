@@ -4,6 +4,8 @@
 
 这会将 `Cesium.js` 外部化，并在打包时自动拷贝 CesiumJS 的四大库和核心文件。
 
+它还支持 [@cesium/engine](https://community.cesium.com/t/cesium-engine-and-cesium-widgets-are-now-available-for-testing/20898) !
+
 - :+1: **DX** 对开发无影响
 - :sparkles: **TypeScript** 完全类型支持
 - :rocket: **非常快！** 在我的笔记本电脑中，示例项目仅需 300ms 完成打包，这是因为 Cesium 库不参与核心构建。
@@ -23,6 +25,7 @@ pnpm add -D vite-plugin-cesium-build
 ```javascript
 import { defineConfig } from 'vite'
 import cesium from 'vite-plugin-cesium-build'
+// import cesium from 'vite-plugin-cesium-build/engine'
 
 export default defineConfig({
   plugins: [
