@@ -8,12 +8,7 @@ function pluginEntry(pluginOptions?: Partial<BuildCesiumOptions>): Plugin[] {
   const options = resolveOptions(pluginOptions, 'node_modules/cesium/Build/Cesium')
 
   return [
-    viteExternalsPlugin(
-      { cesium: 'Cesium' },
-      {
-        disableInServe: true,
-      },
-    ),
+    viteExternalsPlugin({ cesium: 'Cesium' }),
     ...copyCesium(
       options,
       ['Assets', 'ThirdParty', 'Widgets', 'Workers'],

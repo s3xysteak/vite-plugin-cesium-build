@@ -20,7 +20,7 @@ importers:
         version: 5.2.11(@types/node@20.12.11)
       vite-plugin-cesium-build:
         specifier: file:..
-        version: file:..(@types/node@20.12.11)
+        version: file:..(vite@5.2.11(@types/node@20.12.11))
 
 packages:
 
@@ -542,6 +542,8 @@ packages:
 
   vite-plugin-cesium-build@file:..:
     resolution: {directory: .., type: directory}
+    peerDependencies:
+      vite: ^5.0.0
 
   vite-plugin-externals@0.6.2:
     resolution: {integrity: sha512-R5oVY8xDJjLXLTs2XDYzvYbc/RTZuIwOx2xcFbYf+/VXB6eJuatDgt8jzQ7kZ+IrgwQhe6tU8U2fTyy72C25CQ==}
@@ -1023,19 +1025,11 @@ snapshots:
 
   urijs@1.19.11: {}
 
-  vite-plugin-cesium-build@file:..(@types/node@20.12.11):
+  vite-plugin-cesium-build@file:..(vite@5.2.11(@types/node@20.12.11)):
     dependencies:
       vite: 5.2.11(@types/node@20.12.11)
       vite-plugin-externals: 0.6.2(vite@5.2.11(@types/node@20.12.11))
       vite-plugin-static-copy: 0.17.1(vite@5.2.11(@types/node@20.12.11))
-    transitivePeerDependencies:
-      - '@types/node'
-      - less
-      - lightningcss
-      - sass
-      - stylus
-      - sugarss
-      - terser
 
   vite-plugin-externals@0.6.2(vite@5.2.11(@types/node@20.12.11)):
     dependencies:

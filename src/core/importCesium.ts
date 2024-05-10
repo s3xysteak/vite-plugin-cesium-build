@@ -7,7 +7,6 @@ export function importCesium(options: BuildCesiumOptions): Plugin {
 
   return {
     name: 'vite-plugin-cesium-build:importCesium',
-    apply: 'build',
     configResolved(resolvedConfig) {
       base = resolvedConfig.base
     },

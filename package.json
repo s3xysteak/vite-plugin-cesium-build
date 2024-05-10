@@ -49,7 +49,7 @@
     "demo:dev": "cd demo && pnpm dev",
     "demo:build": "cd demo && pnpm build",
     "demo:preview": "cd demo && pnpm preview",
-    "dev": "pnpm build && esno ./scripts/buildDev.ts && pnpm demo:dev",
+    "dev": "pnpm build && pnpm demo:i && pnpm demo:dev",
     "build": "tsc && unbuild",
     "build-only": "unbuild",
     "test": "vitest",
