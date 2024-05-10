@@ -58,8 +58,10 @@
     "lint": "eslint .",
     "lint-fix": "eslint . --fix"
   },
+  "peerDependencies": {
+    "vite": "^5.0.0"
+  },
   "dependencies": {
-    "vite": "^5.2.11",
     "vite-plugin-externals": "^0.6.2",
     "vite-plugin-static-copy": "^0.17.1"
   },
