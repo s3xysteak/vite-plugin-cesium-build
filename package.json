@@ -45,6 +45,7 @@
     "dist"
   ],
   "scripts": {
+    "demo:i": "cd demo && pnpm i",
     "demo:dev": "cd demo && pnpm dev",
     "demo:build": "cd demo && pnpm build",
     "demo:preview": "cd demo && pnpm preview",
@@ -58,18 +59,18 @@
     "lint-fix": "eslint . --fix"
   },
   "dependencies": {
-    "vite": "^5.2.8",
+    "vite": "^5.2.11",
     "vite-plugin-externals": "^0.6.2",
     "vite-plugin-static-copy": "^0.17.1"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^2.12.2",
-    "@types/node": "^20.12.5",
+    "@antfu/eslint-config": "^2.17.0",
+    "@types/node": "^20.12.11",
     "consola": "^3.2.3",
     "eslint": "^8.57.0",
     "esno": "^4.7.0",
-    "typescript": "^5.4.4",
+    "typescript": "^5.4.5",
     "unbuild": "^2.0.0",
-    "vitest": "^1.4.0"
+    "vitest": "^1.6.0"
   }
 }
