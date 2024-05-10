@@ -76,6 +76,31 @@ export default defineConfig({
 })
 ```
 
+## 完全自定义
+
+他提供了所有内部方法，以支持完全的自定义。在极少数有需要的情况下，请查看对应源码。
+
+```js
+import { defineConfig } from 'vite'
+import { copyCesium, importCesium, setBaseUrl } from 'vite-plugin-cesium-build/core'
+
+export default defineConfig({
+  plugins: [
+    [
+      copyCesium(
+        // ...
+      ),
+      importCesium(
+        // ...
+      ),
+      setBaseUrl(
+        // ...
+      )
+    ]
+  ]
+})
+```
+
 ## 其他
 
 如果你是Vue用户，或许可以尝试一下[cesium-use](https://s3xysteak.github.io/cesium-use/) !

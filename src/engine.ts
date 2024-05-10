@@ -1,8 +1,6 @@
 import type { Plugin } from 'vite'
 
-import { setBaseUrl } from './core/setBaseUrl'
-import { type BuildCesiumOptions, resolveOptions } from './core/resolveOptions'
-import { copyCesium } from './core/copyCesium'
+import { type BuildCesiumOptions, copyCesium, resolveOptions, setBaseUrl } from '.'
 
 function pluginEntry(pluginOptions?: Partial<BuildCesiumOptions>): Plugin[] {
   const options = resolveOptions(pluginOptions, 'node_modules/@cesium/engine')

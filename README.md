@@ -76,5 +76,30 @@ export default defineConfig({
 })
 ```
 
+## Fully customizable
+
+It also provide some internal methods to support fully customizable. In the rare case that it is necessary, please check the corresponding source code.
+
+```js
+import { defineConfig } from 'vite'
+import { copyCesium, importCesium, setBaseUrl } from 'vite-plugin-cesium-build/core'
+
+export default defineConfig({
+  plugins: [
+    [
+      copyCesium(
+        // ...
+      ),
+      importCesium(
+        // ...
+      ),
+      setBaseUrl(
+        // ...
+      )
+    ]
+  ]
+})
+```
+
 ## Others
 If you are a Vue user, maybe try [cesium-use](https://s3xysteak.github.io/cesium-use/) !

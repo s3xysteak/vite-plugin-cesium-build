@@ -2,10 +2,7 @@ import type { Plugin } from 'vite'
 
 import { viteExternalsPlugin } from 'vite-plugin-externals'
 
-import { setBaseUrl } from './core/setBaseUrl'
-import { importCesium } from './core/importCesium'
-import { type BuildCesiumOptions, resolveOptions } from './core/resolveOptions'
-import { copyCesium } from './core/copyCesium'
+import { type BuildCesiumOptions, copyCesium, importCesium, resolveOptions, setBaseUrl } from '.'
 
 function pluginEntry(pluginOptions?: Partial<BuildCesiumOptions>): Plugin[] {
   const options = resolveOptions(pluginOptions, 'node_modules/cesium/Build/Cesium')
