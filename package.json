@@ -23,9 +23,9 @@
   },
   "exports": {
     ".": {
-      "types": "./dist/cesium.d.ts",
-      "import": "./dist/cesium.mjs",
-      "require": "./dist/cesium.cjs"
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
     },
     "./engine": {
       "types": "./dist/engine.d.ts",
@@ -33,14 +33,14 @@
       "require": "./dist/engine.cjs"
     },
     "./core": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.mjs",
-      "require": "./dist/index.cjs"
+      "types": "./dist/core.d.ts",
+      "import": "./dist/core.mjs",
+      "require": "./dist/core.cjs"
     }
   },
-  "main": "./dist/cesium.cjs",
-  "module": "./dist/cesium.mjs",
-  "types": "./dist/cesium.d.ts",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
   "files": [
     "dist"
   ],
