@@ -19,10 +19,9 @@ function pluginEntry(pluginOptions?: Partial<BuildCesiumOptions>): Plugin[] {
     ),
 
     importCesium(() => 'node_modules/cesium/Build/CesiumUnminified/Cesium.js', 'serve'),
-    setBaseUrl(options, () => 'node_modules/cesium/Build/CesiumUnminified/Cesium.js', 'serve'),
-
     importCesium(base => `${base}${options.to}/Cesium.js`, 'build'),
-    setBaseUrl(options, base => `${base}${options.to}/`, 'build'),
+
+    setBaseUrl(options),
   ]
 }
 

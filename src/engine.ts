@@ -24,7 +24,7 @@ function pluginEntry(pluginOptions?: Partial<BuildCesiumOptions>): Plugin[] {
         },
       ],
     ),
-    setBaseUrl(options, base => `${base}${options.to}/`),
+    setBaseUrl(options),
   ]
 }
 
