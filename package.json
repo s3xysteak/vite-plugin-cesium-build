@@ -63,11 +63,11 @@
   },
   "dependencies": {
     "vite-plugin-externals": "^0.6.2",
-    "vite-plugin-static-copy": "^0.17.1"
+    "vite-plugin-static-copy": "^1.0.4"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^2.17.0",
-    "@types/node": "^20.12.11",
+    "@antfu/eslint-config": "^2.18.0",
+    "@types/node": "^20.12.12",
     "consola": "^3.2.3",
     "eslint": "^8.57.0",
     "esno": "^4.7.0",
