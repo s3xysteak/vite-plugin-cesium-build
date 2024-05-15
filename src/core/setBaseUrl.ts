@@ -2,12 +2,13 @@ import type { Plugin, ResolvedConfig } from 'vite'
 import type { BuildCesiumOptions } from './resolveOptions'
 import { isString } from './utils'
 
-export function setBaseUrl(options: BuildCesiumOptions): Plugin {
-  const { to, customCesiumBaseUrl } = options
+export function setBaseUrl(options: BuildCesiumOptions, path: (base: string) => string, apply?: Plugin['apply']): Plugin {
+  const { customCesiumBaseUrl } = options
   let base: ResolvedConfig['base']
 
   return {
-    name: 'vite-plugin-cesium-build:setBaseUrl',
+    name: `vite-plugin-cesium-build:setBaseUrl${isString(apply) ? `:${apply}` : ''}`,
+    apply,
     configResolved(resolvedConfig) {
       base = resolvedConfig.base
     },
@@ -16,7 +17,7 @@ export function setBaseUrl(options: BuildCesiumOptions): Plugin {
       : () => [
           {
             tag: 'script',
-            children: `Object.defineProperty(globalThis, 'CESIUM_BASE_URL', { value: ${toUrlValue(customCesiumBaseUrl, { base, to })} })`,
+            children: `Object.defineProperty(globalThis, 'CESIUM_BASE_URL', { value: ${toUrlValue(customCesiumBaseUrl, path(base))} })`,
           },
         ],
   }
@@ -24,7 +25,7 @@ export function setBaseUrl(options: BuildCesiumOptions): Plugin {
 
 export function toUrlValue(
   src: BuildCesiumOptions['customCesiumBaseUrl'],
-  { base, to }: { base: ResolvedConfig['base'], to: BuildCesiumOptions['to'] },
+  str: string,
 ) {
-  return `'${isString(src) ? src : `${base}${to}/`}'`
+  return `'${isString(src) ? src : str}'`
 }
