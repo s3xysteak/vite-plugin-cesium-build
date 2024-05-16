@@ -27,8 +27,8 @@ export function resolveOptions(options: Partial<BuildCesiumOptions> = {}, src: s
   } = options
 
   return {
-    from: from.replace(/[\/\\]$/, ''),
-    to: to.replace(/^[\/\\]|[\/\\]$/, ''),
+    from: from.replace(/[/\\]$/, ''),
+    to: to.replace(/^[/\\]|[/\\]$/, ''),
     customCesiumBaseUrl,
   }
 }
