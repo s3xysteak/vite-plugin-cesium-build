@@ -62,13 +62,13 @@
     "vite": "^5.0.0"
   },
   "dependencies": {
+    "consola": "^3.2.3",
     "vite-plugin-externals": "^0.6.2",
     "vite-plugin-static-copy": "^1.0.4"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.18.0",
     "@types/node": "^20.12.12",
-    "consola": "^3.2.3",
     "eslint": "^8.57.0",
     "esno": "^4.7.0",
     "typescript": "^5.4.5",

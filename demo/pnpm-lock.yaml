@@ -348,6 +348,10 @@ packages:
   commander@2.20.3:
     resolution: {integrity: sha512-GpVkmM8vF2vQUkj2LvZmD35JxeJOLCwJ9cUkugyk2nuhbv3+mJvpLYYt+0+USMxE+oj+ey/lJEnhZw75x/OMcQ==}
 
+  consola@3.2.3:
+    resolution: {integrity: sha512-I5qxpzLv+sJhTVEoLYNcTW+bThDCPsit0vLNKShZx6rLtpilNpmmeTPaeqJb9ZE9dV3DGaeby6Vuhrw38WjeyQ==}
+    engines: {node: ^14.18.0 || >=16.10.0}
+
   dompurify@3.1.2:
     resolution: {integrity: sha512-hLGGBI1tw5N8qTELr3blKjAML/LY4ANxksbS612UiJyDfyf/2D092Pvm+S7pmeTGJRqvlJkFzBoHBQKgQlOQVg==}
 
@@ -814,6 +818,8 @@ snapshots:
 
   commander@2.20.3: {}
 
+  consola@3.2.3: {}
+
   dompurify@3.1.2: {}
 
   draco3d@1.5.7: {}
@@ -1027,6 +1033,7 @@ snapshots:
 
   vite-plugin-cesium-build@file:..(vite@5.2.11(@types/node@20.12.11)):
     dependencies:
+      consola: 3.2.3
       vite: 5.2.11(@types/node@20.12.11)
       vite-plugin-externals: 0.6.2(vite@5.2.11(@types/node@20.12.11))
       vite-plugin-static-copy: 1.0.4(vite@5.2.11(@types/node@20.12.11))
