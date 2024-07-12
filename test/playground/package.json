@@ -9,11 +9,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "cesium": "^1.117.0"
+    "cesium": "^1.119.0"
   },
   "devDependencies": {
-    "typescript": "^5.4.5",
-    "vite": "^5.2.11",
-    "vite-plugin-cesium-build": "file:../.."
+    "typescript": "^5.5.3",
+    "vite": "^5.3.3",
+    "vite-plugin-cesium-build": "file:..\\.."
   }
 }
