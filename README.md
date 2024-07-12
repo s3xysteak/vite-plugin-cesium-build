@@ -14,7 +14,7 @@ It also support [@cesium/engine](https://community.cesium.com/t/cesium-engine-an
 
 ## :memo: Usage
 
-> If you are `"not interested in document just make it work asap"`, please refer to [examples](https://github.com/s3xysteak/vite-plugin-cesium-build/tree/main/examples).
+> If you are `"not interested in document just wanna make it work asap"`, please refer to [examples](https://github.com/s3xysteak/vite-plugin-cesium-build/tree/main/examples).
 
 Install this plugin
 
