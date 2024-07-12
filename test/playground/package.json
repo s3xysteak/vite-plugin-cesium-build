@@ -1,5 +1,5 @@
 {
-  "name": "demo",
+  "name": "playground",
   "type": "module",
   "version": "0.0.0",
   "private": true,
@@ -14,6 +14,6 @@
   "devDependencies": {
     "typescript": "^5.4.5",
     "vite": "^5.2.11",
-    "vite-plugin-cesium-build": "file:.."
+    "vite-plugin-cesium-build": "file:../.."
   }
 }

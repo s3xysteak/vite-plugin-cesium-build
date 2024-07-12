@@ -19,8 +19,8 @@ importers:
         specifier: ^5.2.11
         version: 5.2.11(@types/node@20.12.11)
       vite-plugin-cesium-build:
-        specifier: file:..
-        version: file:..(vite@5.2.11(@types/node@20.12.11))
+        specifier: file:../..
+        version: file:../..(vite@5.2.11(@types/node@20.12.11))
 
 packages:
 
@@ -535,8 +535,8 @@ packages:
   urijs@1.19.11:
     resolution: {integrity: sha512-HXgFDgDommxn5/bIv0cnQZsPhHDA90NPHD6+c/v21U5+Sx5hoP8+dP9IZXBU1gIfvdRfhG8cel9QNPeionfcCQ==}
 
-  vite-plugin-cesium-build@file:..:
-    resolution: {directory: .., type: directory}
+  vite-plugin-cesium-build@file:../..:
+    resolution: {directory: ../.., type: directory}
     peerDependencies:
       vite: ^5.0.0
 
@@ -1022,7 +1022,7 @@ snapshots:
 
   urijs@1.19.11: {}
 
-  vite-plugin-cesium-build@file:..(vite@5.2.11(@types/node@20.12.11)):
+  vite-plugin-cesium-build@file:../..(vite@5.2.11(@types/node@20.12.11)):
     dependencies:
       consola: 3.2.3
       vite: 5.2.11(@types/node@20.12.11)

@@ -45,11 +45,11 @@
     "dist"
   ],
   "scripts": {
-    "demo:i": "cd demo && pnpm i",
-    "demo:dev": "cd demo && pnpm dev",
-    "demo:build": "cd demo && pnpm build",
-    "demo:preview": "cd demo && pnpm preview",
-    "dev": "pnpm build && pnpm demo:i && pnpm demo:dev",
+    "pg:i": "cd test/playground && pnpm i",
+    "pg:dev": "cd test/playground && pnpm dev",
+    "pg:build": "cd test/playground && pnpm build",
+    "pg:preview": "cd test/playground && pnpm preview",
+    "dev": "pnpm build && pnpm pg:i && pnpm pg:dev",
     "build": "tsc && unbuild",
     "build-only": "unbuild",
     "test": "vitest",
