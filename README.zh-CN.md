@@ -27,7 +27,7 @@ pnpm add -D vite-plugin-cesium-build
 ```javascript
 import { defineConfig } from 'vite'
 import cesium from 'vite-plugin-cesium-build'
-// import cesium from 'vite-plugin-cesium-build/engine'
+// import cesium from 'vite-plugin-cesium-build/engine' // when using @cesium/engine
 
 export default defineConfig({
   plugins: [
