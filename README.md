@@ -14,6 +14,8 @@ It also support [@cesium/engine](https://community.cesium.com/t/cesium-engine-an
 
 ## :memo: Usage
 
+> If you are `"not interested in document just make it work asap"`, please refer to [examples](https://github.com/s3xysteak/vite-plugin-cesium-build/tree/main/examples).
+
 Install this plugin
 
 ```sh
@@ -29,7 +31,7 @@ import cesium from 'vite-plugin-cesium-build'
 
 export default defineConfig({
   plugins: [
-    //...
+    // ...
     cesium()
   ]
 })
@@ -41,7 +43,7 @@ By default, This plugin will automatically add the code to your `index.html`:
 ```javascript
 // Customize variable 'to' in options
 Object.defineProperty(globalThis, 'CESIUM_BASE_URL', {
-  value: '/${to}/'
+  value: `/${to}/`
 })
 ```
 

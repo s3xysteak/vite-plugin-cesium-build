@@ -14,6 +14,8 @@
 
 ## :memo: 使用
 
+> 如果你 `"不关心文档只想尽快让它跑起来"`, 请移步 [examples](https://github.com/s3xysteak/vite-plugin-cesium-build/tree/main/examples).
+
 安装此插件
 
 ```sh
@@ -29,7 +31,7 @@ import cesium from 'vite-plugin-cesium-build'
 
 export default defineConfig({
   plugins: [
-    //...
+    // ...
     cesium()
   ]
 })
@@ -41,7 +43,7 @@ export default defineConfig({
 ```javascript
 // Customize variable 'to' in options
 Object.defineProperty(globalThis, 'CESIUM_BASE_URL', {
-  value: '/${to}/'
+  value: `/${to}/`
 })
 ```
 
