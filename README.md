@@ -2,7 +2,7 @@
 
 English | [简体中文](/README.zh-CN.md)
 
-It externalizes `Cesium.js` and automatically copies the four major libraries and core files of CesiumJS during the build process.
+It externalizes `Cesium.js` as well as its styles `widget.css` and automatically copies the four major libraries and core files of CesiumJS during the build process.
 
 It also support [@cesium/engine](https://community.cesium.com/t/cesium-engine-and-cesium-widgets-are-now-available-for-testing/20898) !
 
