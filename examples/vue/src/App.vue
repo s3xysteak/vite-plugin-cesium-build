@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { onMounted, ref } from 'vue'
 import * as Cesium from 'cesium'
-import 'cesium/Build/Cesium/Widgets/widgets.css'
 
 const container = ref()
 onMounted(() => {

@@ -20,6 +20,6 @@
     "vite-plugin-cesium-build": "^0.4.3"
   },
   "dependencies": {
-    "cesium": "^1.119.0"
+    "cesium": "^1.121.1"
   }
 }

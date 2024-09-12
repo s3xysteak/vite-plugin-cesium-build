@@ -1,7 +1,6 @@
 import { useEffect, useRef } from 'react'
 
 import * as Cesium from 'cesium'
-import 'cesium/Build/Cesium/Widgets/widgets.css'
 
 function App() {
   const container = useRef(null)

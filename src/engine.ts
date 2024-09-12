@@ -1,6 +1,6 @@
 import type { Plugin } from 'vite'
 
-import { type BuildCesiumOptions, copyCesium, resolveOptions, setBaseUrl } from './core'
+import { type BuildCesiumOptions, copyCesium, importCss, resolveOptions, setBaseUrl } from './core'
 
 function pluginEntry(pluginOptions?: Partial<BuildCesiumOptions>): Plugin[] {
   const options = resolveOptions(pluginOptions, 'node_modules/@cesium/engine')
@@ -15,6 +15,10 @@ function pluginEntry(pluginOptions?: Partial<BuildCesiumOptions>): Plugin[] {
           dest: `${options.to}/Assets/`,
         },
         {
+          src: `${options.from}/Source/Widget/CesiumWidget.css`,
+          dest: `${options.to}/Widget/`,
+        },
+        {
           src: `${options.from}/Build/ThirdParty/*`,
           dest: `${options.to}/ThirdParty/`,
         },
@@ -24,6 +28,10 @@ function pluginEntry(pluginOptions?: Partial<BuildCesiumOptions>): Plugin[] {
         },
       ],
     ),
+
+    importCss(base => `${base}${options.from}/Source/Widget/CesiumWidget.css`, 'serve'),
+    importCss(base => `${base}${options.to}/Widget/CesiumWidget.css`, 'build'),
+
     setBaseUrl(options),
   ]
 }

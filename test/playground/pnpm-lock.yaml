@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       cesium:
-        specifier: ^1.119.0
-        version: 1.119.0
+        specifier: ^1.121.1
+        version: 1.121.1
     devDependencies:
       typescript:
         specifier: ^5.5.3
@@ -24,12 +24,12 @@ importers:
 
 packages:
 
-  '@cesium/engine@10.0.0':
-    resolution: {integrity: sha512-0bynRIV5nGjZGuRm0ajvZ4cyIwSW/Z29CMaWcruJUhjprEW9u9YvJ5xsJkTe1qD45sR2E1XEejVkPv056x5GNg==}
+  '@cesium/engine@11.0.0':
+    resolution: {integrity: sha512-0z3mJNNly407h3/bAvGoGnjA0ygprkVz32z9x1VNmPXf9AuybKu7Q4wRrChUhC/qsNj3L45kP6KqyDuHSe2bhw==}
     engines: {node: '>=14.0.0'}
 
-  '@cesium/widgets@7.0.0':
-    resolution: {integrity: sha512-h8ntI7irvzZbtXcYmwDXxJe8WDbrGreoV7Z+IyA18M+ko7wI5oFtWwVsqH6QwNPNqE7gk7YxqVbGUi0UsRPC8g==}
+  '@cesium/widgets@8.0.0':
+    resolution: {integrity: sha512-Rnid5BbLBZjwFdbr3lgOwK3fhql/BeEbf5l9ZZE+Zc7V8Fb6wgKM8QmrL+bbJ+BtuiELp+SkNxcF97Ktifxb4g==}
     engines: {node: '>=14.0.0'}
 
   '@esbuild/aix-ppc64@0.21.5':
@@ -292,8 +292,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@tweenjs/tween.js@23.1.2':
-    resolution: {integrity: sha512-kMCNaZCJugWI86xiEHaY338CU5JpD0B97p1j1IKNn/Zto8PgACjQx0UxbHjmOcLl/dDOBnItwD07KmCs75pxtQ==}
+  '@tweenjs/tween.js@25.0.0':
+    resolution: {integrity: sha512-XKLA6syeBUaPzx4j3qwMqzzq+V4uo72BnlbOjmuljLrRqdsd3qnzvZZoxvMHZ23ndsRS4aufU6JOZYpCbU6T1A==}
 
   '@types/estree@1.0.5':
     resolution: {integrity: sha512-/kYRxGDLWzHOB7q+wtSUQlFrtcdUccpfy+X+9iMBpHK8QLLhx2wIPYuS5DYtR9Wa/YlZAbIovy7qVdB1Aq6Lyw==}
@@ -328,8 +328,8 @@ packages:
     resolution: {integrity: sha512-yQbXgO/OSZVD2IsiLlro+7Hf6Q18EJrKSEsdoMzKePKXct3gvD8oLcOQdIzGupr5Fj+EDe8gO/lxc1BzfMpxvA==}
     engines: {node: '>=8'}
 
-  cesium@1.119.0:
-    resolution: {integrity: sha512-ifapkGusMJ2YhpyjAXGNiiZXFZ+QLzWro1OyBsqJjSGOK95Aab9dOBw0aPDXdzlaN7hxUFViN5+b2nN75fC9QA==}
+  cesium@1.121.1:
+    resolution: {integrity: sha512-WpdaGFd8qCOHiE9khV0sWWjCMXAX1U9Aou8MzMC/F0Akp6YqcOk4HLk4LLhZKeOjO/Bh27iTIW2mxEZ5+dtCxg==}
     engines: {node: '>=18.18.0'}
 
   chokidar@3.6.0:
@@ -349,8 +349,8 @@ packages:
   draco3d@1.5.7:
     resolution: {integrity: sha512-m6WCKt/erDXcw+70IJXnG7M3awwQPAsZvJGX5zY7beBqpELw6RDGkYVU0W43AFxye4pDZ5i2Lbyc/NNGqwjUVQ==}
 
-  earcut@2.2.4:
-    resolution: {integrity: sha512-/pjZsA1b4RPHbeWZQn66SWS8nZZWLQQ23oE3Eam7aroEFGEvwKAsJfZ9ytiEMycfzXWpca4FA9QIOehf7PocBQ==}
+  earcut@3.0.0:
+    resolution: {integrity: sha512-41Fs7Q/PLq1SDbqjsgcY7GA42T0jvaCNGXgGtsNdvg+Yv8eIu06bxv4/PoREkZ9nMDNwnUSG9OFB9+yv8eKhDg==}
 
   es-module-lexer@0.4.1:
     resolution: {integrity: sha512-ooYciCUtfw6/d2w56UVeqHPcoCFAiJdz5XOkYpv/Txl1HMUozpXjz/2RIQgqwKdXNDPSF1W7mJCFse3G+HDyAA==}
@@ -479,11 +479,11 @@ packages:
   queue-microtask@1.2.3:
     resolution: {integrity: sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==}
 
-  quickselect@2.0.0:
-    resolution: {integrity: sha512-RKJ22hX8mHe3Y6wH/N3wCM6BWtjaxIyyUIkpHOvfFnxdI4yD4tBXEBKSbriGujF6jnSVkJrffuo6vxACiSSxIw==}
+  quickselect@3.0.0:
+    resolution: {integrity: sha512-XdjUArbK4Bm5fLLvlm5KpTFOiOThgfWWI4axAZDWg4E/0mKdZyI9tNEfds27qCi1ze/vwTR16kvmmGhRra3c2g==}
 
-  rbush@3.0.1:
-    resolution: {integrity: sha512-XRaVO0YecOpEuIvbhbpTrZgoiI6xBlz6hnlr6EHhd+0x9ase6EmeN+hdwwUaJvLcsFFQ8iWVF1GAK1yB0BWi0w==}
+  rbush@4.0.1:
+    resolution: {integrity: sha512-IP0UpfeWQujYC8Jg162rMNc01Rf0gWMMAb2Uxus/Q0qOFw4lCcq6ZnQEZwUoJqWyUGJ9th7JjwI4yIWo+uvoAQ==}
 
   readdirp@3.6.0:
     resolution: {integrity: sha512-hOS089on8RduqdbhvQ5Z37A0ESjsqz6qnRcffsMU3495FuTdqSm+7bhJ29JvIOsBDEEnan5DPu9t3To9VRlMzA==}
@@ -582,15 +582,15 @@ packages:
 
 snapshots:
 
-  '@cesium/engine@10.0.0':
+  '@cesium/engine@11.0.0':
     dependencies:
-      '@tweenjs/tween.js': 23.1.2
+      '@tweenjs/tween.js': 25.0.0
       '@zip.js/zip.js': 2.7.45
       autolinker: 4.0.0
       bitmap-sdf: 1.0.4
       dompurify: 3.1.6
       draco3d: 1.5.7
-      earcut: 2.2.4
+      earcut: 3.0.0
       grapheme-splitter: 1.0.4
       jsep: 1.3.8
       kdbush: 4.0.2
@@ -600,13 +600,13 @@ snapshots:
       meshoptimizer: 0.21.0
       pako: 2.1.0
       protobufjs: 7.3.2
-      rbush: 3.0.1
+      rbush: 4.0.1
       topojson-client: 3.1.0
       urijs: 1.19.11
 
-  '@cesium/widgets@7.0.0':
+  '@cesium/widgets@8.0.0':
     dependencies:
-      '@cesium/engine': 10.0.0
+      '@cesium/engine': 11.0.0
       nosleep.js: 0.12.0
 
   '@esbuild/aix-ppc64@0.21.5':
@@ -761,7 +761,7 @@ snapshots:
   '@rollup/rollup-win32-x64-msvc@4.18.1':
     optional: true
 
-  '@tweenjs/tween.js@23.1.2': {}
+  '@tweenjs/tween.js@25.0.0': {}
 
   '@types/estree@1.0.5': {}
 
@@ -790,10 +790,10 @@ snapshots:
     dependencies:
       fill-range: 7.1.1
 
-  cesium@1.119.0:
+  cesium@1.121.1:
     dependencies:
-      '@cesium/engine': 10.0.0
-      '@cesium/widgets': 7.0.0
+      '@cesium/engine': 11.0.0
+      '@cesium/widgets': 8.0.0
 
   chokidar@3.6.0:
     dependencies:
@@ -815,7 +815,7 @@ snapshots:
 
   draco3d@1.5.7: {}
 
-  earcut@2.2.4: {}
+  earcut@3.0.0: {}
 
   es-module-lexer@0.4.1: {}
 
@@ -962,11 +962,11 @@ snapshots:
 
   queue-microtask@1.2.3: {}
 
-  quickselect@2.0.0: {}
+  quickselect@3.0.0: {}
 
-  rbush@3.0.1:
+  rbush@4.0.1:
     dependencies:
-      quickselect: 2.0.0
+      quickselect: 3.0.0
 
   readdirp@3.6.0:
     dependencies:

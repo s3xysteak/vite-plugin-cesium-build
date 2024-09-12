@@ -1,7 +1,6 @@
 import { effect, signal } from '@preact/signals'
 
 import * as Cesium from 'cesium'
-import 'cesium/Build/Cesium/Widgets/widgets.css'
 
 export function App() {
   const container = signal<HTMLElement | null>(null)
