@@ -23,6 +23,10 @@ function pluginEntry(pluginOptions?: Partial<BuildCesiumOptions>): Plugin[] {
           dest: `${options.to}/ThirdParty/`,
         },
         {
+          src: `${options.from}/Source/Widget/CesiumWidget.css`,
+          dest: `${options.to}/Widget/`,
+        },
+        {
           src: `${options.from}/Build/ThirdParty/*`,
           dest: `${options.to}/ThirdParty/`,
         },
