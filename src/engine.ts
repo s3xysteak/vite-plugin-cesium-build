@@ -15,6 +15,10 @@ function pluginEntry(pluginOptions?: Partial<BuildCesiumOptions>): Plugin[] {
           dest: `${options.to}/Assets/`,
         },
         {
+          src: `${options.from}/Source/ThirdParty/*.wasm`,
+          dest: `${options.to}/ThirdParty/`,
+        },
+        {
           src: `${options.from}/Build/ThirdParty/*`,
           dest: `${options.to}/ThirdParty/`,
         },
