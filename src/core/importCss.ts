@@ -1,7 +1,9 @@
 import type { Plugin, ResolvedConfig } from 'vite'
+import type { BuildCesiumOptions } from './resolveOptions'
 import { isString } from './utils'
 
-export function importCss(path: (base: string) => string, apply?: Plugin['apply']): Plugin {
+export function importCss(options: BuildCesiumOptions, path: (base: string) => string, apply?: Plugin['apply']): Plugin {
+  const { css } = options
   let base: ResolvedConfig['base']
 
   return {
@@ -10,14 +12,16 @@ export function importCss(path: (base: string) => string, apply?: Plugin['apply'
     configResolved(resolvedConfig) {
       base = resolvedConfig.base
     },
-    transformIndexHtml: () => [
-      {
-        tag: 'link',
-        attrs: {
-          rel: 'stylesheet',
-          href: path(base),
-        },
-      },
-    ],
+    transformIndexHtml: css
+      ? () => [
+          {
+            tag: 'link',
+            attrs: {
+              rel: 'stylesheet',
+              href: path(base),
+            },
+          },
+        ]
+      : void 0,
   }
 }

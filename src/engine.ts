@@ -37,8 +37,8 @@ function pluginEntry(pluginOptions?: Partial<BuildCesiumOptions>): Plugin[] {
       ],
     ),
 
-    importCss(base => `${base}${options.from}/Source/Widget/CesiumWidget.css`, 'serve'),
-    importCss(base => `${base}${options.to}/Widget/CesiumWidget.css`, 'build'),
+    importCss(options, base => `${base}${options.from}/Source/Widget/CesiumWidget.css`, 'serve'),
+    importCss(options, base => `${base}${options.to}/Widget/CesiumWidget.css`, 'build'),
 
     setBaseUrl(options),
   ]
