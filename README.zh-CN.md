@@ -2,7 +2,7 @@
 
 [English](README.md) | 简体中文
 
-这会将 `Cesium.js` 外部化，并在打包时自动拷贝 CesiumJS 的四大库和核心文件。
+这会将 `Cesium.js` 与其样式 `widget.css` 外部化，并在打包时自动拷贝 CesiumJS 的四大库和核心文件。
 
 它还支持 [@cesium/engine](https://community.cesium.com/t/cesium-engine-and-cesium-widgets-are-now-available-for-testing/20898) !
 
