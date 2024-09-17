@@ -49,6 +49,22 @@ Object.defineProperty(globalThis, 'CESIUM_BASE_URL', {
 
 如果要阻止这个默认行为，见Options中的`customCesiumBaseUrl`。
 
+如果使用的Cesium版本为v1.97及更高，你可以将 `css` 选项设置为 `true`:
+
+```javascript
+export default defineConfig({
+  plugins: [
+    cesium({ css: true })
+  ]
+})
+```
+
+这将会自动将Cesium的样式添加到你的 `index.html`:
+
+```html
+<link rel="stylesheet" href="./cesium-package/Widgets/widgets.css">
+```
+
 ## :wrench: 选项
 
 除此以外，插件提供了一些配置项：
@@ -72,7 +88,11 @@ export default defineConfig({
       /**
        * 设置为true时，你需要自行设置CESIUM_BASE_URL
        */
-      customCesiumBaseUrl: false
+      customCesiumBaseUrl: false,
+      /**
+       * 为 `true` 时, Cesium的样式将会被自动添加.
+       */
+      css: boolean
     })
   ]
 })
