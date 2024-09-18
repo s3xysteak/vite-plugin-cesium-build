@@ -38,8 +38,12 @@ function pluginEntry(pluginOptions?: Partial<BuildCesiumOptions>): Plugin[] {
       customCopyList,
     ),
 
-    importCss(options, base => `${base}${options.from}/Source/Widget/CesiumWidget.css`, 'serve'),
-    importCss(options, base => `${base}${options.to}/Widget/CesiumWidget.css`, 'build'),
+    ...options.css
+      ? [
+          importCss(options, base => `${base}${options.from}/Source/Widget/CesiumWidget.css`, 'serve'),
+          importCss(options, base => `${base}${options.to}/Widget/CesiumWidget.css`, 'build'),
+        ]
+      : [],
 
     setBaseUrl(options),
   ]
