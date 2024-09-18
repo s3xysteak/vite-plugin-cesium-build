@@ -21,7 +21,7 @@ function pluginEntry(pluginOptions?: Partial<BuildCesiumOptions>): Plugin[] {
     importCesium(base => `${base}${options.from}Unminified/Cesium.js`, 'serve'),
     importCesium(base => `${base}${options.to}/Cesium.js`, 'build'),
 
-    importCss(options, base => `${base}${options.from}Unminified/Widgets/widgets.css`, 'serve'),
+    importCss(options, base => `${base}${options.from}/Widgets/widgets.css`, 'serve'),
     importCss(options, base => `${base}${options.to}/Widgets/widgets.css`, 'build'),
 
     setBaseUrl(options),
