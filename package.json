@@ -1,7 +1,7 @@
 {
   "name": "vite-plugin-cesium-build",
   "type": "module",
-  "version": "0.4.4",
+  "version": "0.4.5",
   "private": false,
   "description": "CesiumJS support for Vite",
   "author": "s3xysteak",
