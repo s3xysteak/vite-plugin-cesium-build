@@ -49,6 +49,22 @@ Object.defineProperty(globalThis, 'CESIUM_BASE_URL', {
 
 To prevent it, see `customCesiumBaseUrl` in Options.
 
+If using Cesium version 1.97 or older, you can set `css` option to `true`:
+
+```javascript
+export default defineConfig({
+  plugins: [
+    cesium({ css: true })
+  ]
+})
+```
+
+That will automatically add Cesium's css to your `index.html`:
+
+```html
+<link rel="stylesheet" href="./cesium-package/Widgets/widgets.css">
+```
+
 ## :wrench: Options
 
 In addition, the plugin provides some configuration options:
@@ -72,7 +88,11 @@ export default defineConfig({
       /**
        * If `true`, you need to manually set the CESIUM_BASE_URL.
        */
-      customCesiumBaseUrl: false
+      customCesiumBaseUrl: false,
+      /**
+       * If `true`, Cesium's css will be added automatically.
+       */
+      css: boolean
     })
   ]
 })
@@ -104,4 +124,5 @@ export default defineConfig({
 ```
 
 ## Others
+
 If you are a Vue user, maybe try [cesium-use](https://s3xysteak.github.io/cesium-use/) !

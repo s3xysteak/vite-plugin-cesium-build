@@ -17,6 +17,12 @@ export interface BuildCesiumOptions {
    * @default false
    */
   customCesiumBaseUrl: boolean | string
+  /**
+   * If `true`, cesium's css will be added automatically.
+   *
+   * @default false
+   */
+  css: boolean
 }
 
 export function resolveOptions(options: Partial<BuildCesiumOptions> = {}, src: string): BuildCesiumOptions {
@@ -24,11 +30,13 @@ export function resolveOptions(options: Partial<BuildCesiumOptions> = {}, src: s
     from = src,
     to = 'cesium-package',
     customCesiumBaseUrl = false,
+    css = false,
   } = options
 
   return {
     from: from.replace(/[/\\]$/, ''),
     to: to.replace(/^[/\\]|[/\\]$/, ''),
     customCesiumBaseUrl,
+    css,
   }
 }

@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@preact/signals": "^1.3.0",
-    "cesium": "^1.119.0",
+    "cesium": "^1.121.1",
     "preact": "^10.22.0"
   },
   "devDependencies": {
