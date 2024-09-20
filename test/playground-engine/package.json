@@ -9,7 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "cesium": "catalog:"
+    "@cesium/engine": "catalog:"
   },
   "devDependencies": {
     "vite": "catalog:",
