@@ -9,13 +9,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "cesium": "^1.121.1",
+    "cesium": "catalog:",
     "solid-js": "^1.8.17"
   },
   "devDependencies": {
-    "typescript": "^5.2.2",
-    "vite": "^5.3.1",
-    "vite-plugin-cesium-build": "^0.4.3",
+    "vite": "catalog:",
+    "vite-plugin-cesium-build": "workspace:*",
     "vite-plugin-solid": "^2.10.2"
   }
 }

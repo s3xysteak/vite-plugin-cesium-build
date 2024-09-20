@@ -1,6 +1,7 @@
 packages:
   - test/playground
   - test/playground-*
+  - examples/*
 
 catalog:
   cesium: ^1.121.1
