@@ -10,6 +10,7 @@ export function App() {
     if (!container.value)
       return
 
+    /* eslint-disable no-new */
     new Cesium.Viewer(container.value!)
   })
 

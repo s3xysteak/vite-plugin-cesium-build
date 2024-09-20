@@ -50,12 +50,12 @@
     "dev:engine": "esno ./scripts/pg.ts dev ./test/playground-engine",
     "dev:engine-preview": "esno ./scripts/pg.ts preview ./test/playground-engine",
     "build": "tsc && unbuild",
-    "build-only": "unbuild",
+    "build:only": "unbuild",
     "test": "vitest",
     "test:once": "vitest run",
     "release": "esno ./scripts/release.ts",
     "lint": "eslint .",
-    "lint-fix": "eslint . --fix"
+    "lint:fix": "eslint . --fix"
   },
   "peerDependencies": {
     "vite": "^5.0.0"

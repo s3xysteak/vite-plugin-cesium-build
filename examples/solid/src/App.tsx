@@ -1,11 +1,12 @@
 import * as Cesium from 'cesium'
-import 'cesium/Build/Cesium/Widgets/widgets.css'
 import { onMount } from 'solid-js'
+import 'cesium/Build/Cesium/Widgets/widgets.css'
 
 function App() {
   let container: HTMLDivElement | undefined
 
   onMount(() => {
+    /* eslint-disable no-new */
     new Cesium.Viewer(container!)
   })
 

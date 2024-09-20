@@ -1,4 +1,4 @@
-import { URL, fileURLToPath } from 'node:url'
+import { fileURLToPath, URL } from 'node:url'
 import { defaultExclude, defineConfig } from 'vitest/config'
 
 export default defineConfig({
