@@ -50,6 +50,7 @@
     "dev:engine": "esno ./scripts/pg.ts dev ./test/playground/engine",
     "dev:engine-preview": "esno ./scripts/pg.ts preview ./test/playground/engine",
     "build": "tsc && unbuild",
+    "type:check": "tsc",
     "build:only": "unbuild",
     "test": "vitest",
     "test:once": "vitest run",
