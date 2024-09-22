@@ -15,13 +15,17 @@ export function imports(pathList: Array<(base: string) => string>, apply?: Plugi
       return path.endsWith('.js')
         ? {
             tag: 'script',
-            attrs: { src: path },
+            attrs: {
+              ...apply === 'build' ? { crossorigin: true } : {},
+              src: path,
+            },
           }
         : path.endsWith('.css')
           ? {
               tag: 'link',
               attrs: {
                 rel: 'stylesheet',
+                ...apply === 'build' ? { crossorigin: true } : {},
                 href: path,
               },
             }
