@@ -1,43 +1,52 @@
 import type { Plugin } from 'vite'
 
 import { viteExternalsPlugin } from 'vite-plugin-externals'
+import { viteStaticCopy } from 'vite-plugin-static-copy'
 
-import { type BuildCesiumOptions, copyCesium, importCesium, importCss, resolveOptions, setBaseUrl } from './core'
+import { type BuildCesiumOptions, imports, resolveOptions, setBaseUrl } from './core'
 
 function pluginEntry(pluginOptions?: Partial<BuildCesiumOptions>): Plugin[] {
   const options = resolveOptions(pluginOptions, 'node_modules/cesium/Build/Cesium')
 
-  const customCopyList = [
-    {
-      src: `${options.from}/Cesium.js`,
-      dest: `${options.to}/`,
-    },
-  ]
-  if (options.css) {
-    customCopyList.push({
-      src: `${options.from}/Widgets/widgets.css`,
-      dest: `${options.to}/Widgets/`,
-    })
-  }
-
   return [
+    // externals
     viteExternalsPlugin({ cesium: 'Cesium' }),
-    ...copyCesium(
-      options,
-      ['Assets', 'ThirdParty', 'Widgets', 'Workers'],
-      customCopyList,
-    ),
 
-    importCesium(base => `${base}${options.from}Unminified/Cesium.js`, 'serve'),
-    importCesium(base => `${base}${options.to}/Cesium.js`, 'build'),
+    // copy
+    ...viteStaticCopy({
+      targets: [
+        // resources
+        ...['Assets', 'ThirdParty', 'Widgets', 'Workers'].map(item => ({
+          src: `${options.from}/${item}/*`,
+          dest: `${options.to}/${item}/`,
+        })),
+        // Cesium.js
+        {
+          src: `${options.from}/Cesium.js`,
+          dest: `${options.to}/`,
+        },
+        // css
+        ...options.css
+          ? [{
+              src: `${options.from}/Widgets/widgets.css`,
+              dest: `${options.to}/Widgets/`,
+            }]
+          : [],
+      ],
+      silent: true,
+    }),
 
+    // imports
+    imports([base => `${base}${options.from}Unminified/Cesium.js`], 'serve'),
+    imports([base => `${base}${options.to}/Cesium.js`], 'build'),
     ...options.css
       ? [
-          importCss(options, base => `${base}${options.from}/Widgets/widgets.css`, 'serve'),
-          importCss(options, base => `${base}${options.to}/Widgets/widgets.css`, 'build'),
+          imports([base => `${base}${options.from}/Widgets/widgets.css`], 'serve'),
+          imports([base => `${base}${options.to}/Widgets/widgets.css`], 'build'),
         ]
       : [],
 
+    // base url
     setBaseUrl(options),
   ]
 }
