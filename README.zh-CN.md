@@ -86,7 +86,7 @@ export default defineConfig({
       to: 'cesium-package',
 
       /**
-       * 设置为true时，你需要自行设置CESIUM_BASE_URL
+       * 设置为true时，你需要自行设置CESIUM_BASE_URL。或者输入字符串以直接自定义base url。
        */
       customCesiumBaseUrl: false,
       /**
@@ -104,15 +104,12 @@ export default defineConfig({
 
 ```js
 import { defineConfig } from 'vite'
-import { copyCesium, importCesium, setBaseUrl } from 'vite-plugin-cesium-build/core'
+import { imports, setBaseUrl } from 'vite-plugin-cesium-build/core'
 
 export default defineConfig({
   plugins: [
     [
-      copyCesium(
-        // ...
-      ),
-      importCesium(
+      imports(
         // ...
       ),
       setBaseUrl(

@@ -86,7 +86,7 @@ export default defineConfig({
       to: 'cesium-package',
 
       /**
-       * If `true`, you need to manually set the CESIUM_BASE_URL.
+       * If `true`, you need to manually set the CESIUM_BASE_URL. Or use `string` to customize the base url directly.
        */
       customCesiumBaseUrl: false,
       /**
@@ -104,15 +104,12 @@ It also provide some internal methods to support fully customizable. In the rare
 
 ```js
 import { defineConfig } from 'vite'
-import { copyCesium, importCesium, setBaseUrl } from 'vite-plugin-cesium-build/core'
+import { imports, setBaseUrl } from 'vite-plugin-cesium-build/core'
 
 export default defineConfig({
   plugins: [
     [
-      copyCesium(
-        // ...
-      ),
-      importCesium(
+      imports(
         // ...
       ),
       setBaseUrl(
