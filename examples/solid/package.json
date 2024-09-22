@@ -1,5 +1,5 @@
 {
-  "name": "solid",
+  "name": "@pg/solid",
   "type": "module",
   "version": "0.0.0",
   "private": true,
