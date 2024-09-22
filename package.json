@@ -45,10 +45,10 @@
     "dist"
   ],
   "scripts": {
-    "dev": "esno ./scripts/pg.ts dev ./test/playground",
-    "dev-preview": "esno ./scripts/pg.ts preview ./test/playground",
-    "dev:engine": "esno ./scripts/pg.ts dev ./test/playground-engine",
-    "dev:engine-preview": "esno ./scripts/pg.ts preview ./test/playground-engine",
+    "dev": "esno ./scripts/pg.ts dev ./test/playground/cesium",
+    "dev-preview": "esno ./scripts/pg.ts preview ./test/playground/cesium",
+    "dev:engine": "esno ./scripts/pg.ts dev ./test/playground/engine",
+    "dev:engine-preview": "esno ./scripts/pg.ts preview ./test/playground/engine",
     "build": "tsc && unbuild",
     "type:check": "tsc",
     "build:only": "unbuild",

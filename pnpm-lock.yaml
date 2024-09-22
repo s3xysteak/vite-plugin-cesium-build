@@ -202,7 +202,7 @@ importers:
         specifier: ^2.0.21
         version: 2.1.6(typescript@5.5.4)
 
-  test/playground:
+  test/playground/cesium:
     dependencies:
       cesium:
         specifier: 'catalog:'
@@ -213,9 +213,9 @@ importers:
         version: 5.4.6(@types/node@22.5.5)
       vite-plugin-cesium-build:
         specifier: workspace:*
-        version: link:../..
+        version: link:../../..
 
-  test/playground-engine:
+  test/playground/engine:
     dependencies:
       '@cesium/engine':
         specifier: 'catalog:'
@@ -226,7 +226,7 @@ importers:
         version: 5.4.6(@types/node@22.5.5)
       vite-plugin-cesium-build:
         specifier: workspace:*
-        version: link:../..
+        version: link:../../..
 
 packages:
 

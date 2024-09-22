@@ -1,6 +1,5 @@
 packages:
-  - test/playground
-  - test/playground-*
+  - test/playground/*
   - examples/*
 
 catalog:
