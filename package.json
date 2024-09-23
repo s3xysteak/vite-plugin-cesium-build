@@ -3,6 +3,7 @@
   "type": "module",
   "version": "0.5.0",
   "private": false,
+  "packageManager": "pnpm@9.11.0",
   "description": "CesiumJS support for Vite",
   "author": "s3xysteak",
   "license": "MIT",
