@@ -45,7 +45,7 @@
     "dist"
   ],
   "scripts": {
-    "dev": "unbuild --stub && pnpm i",
+    "dev": "unbuild --stub",
     "build": "tsc && unbuild",
     "type:check": "tsc",
     "build:only": "unbuild",
