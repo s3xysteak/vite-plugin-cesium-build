@@ -53,7 +53,7 @@
     "test": "vitest",
     "test:once": "vitest run",
     "release": "pnpm type:check && bumpp",
-    "publish": "pnpm publish --access public --no-git-checks",
+    "publish:ci": "pnpm publish --access public --no-git-checks",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
   },
