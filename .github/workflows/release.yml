@@ -1,5 +1,9 @@
 name: Release
 
+permissions:
+  id-token: write
+  contents: write
+
 on:
   push:
     tags:
@@ -7,33 +11,27 @@ on:
 
 jobs:
   release:
-    permissions:
-      id-token: write
-      contents: write
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      - name: Prepare pnpm
-        uses: pnpm/action-setup@v3
-        with:
-          version: 8
-
       - name: Set node
         uses: actions/setup-node@v4
         with:
           node-version: lts/*
-          cache: pnpm
           registry-url: 'https://registry.npmjs.org'
+
+      - name: Prepare pnpm
+        uses: pnpm/action-setup@v4
 
       - run: pnpm i
 
       - run: pnpm build
 
       - name: Publish to NPM
-        run: pnpm publish --access public --no-git-checks
+        run: pnpm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
           NPM_CONFIG_PROVENANCE: true
