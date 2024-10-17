@@ -25,18 +25,16 @@ export interface BuildCesiumOptions {
   css: boolean
 }
 
-export function resolveOptions(options: Partial<BuildCesiumOptions> = {}, src: string): BuildCesiumOptions {
-  const {
-    from = src,
-    to = 'cesium-package',
-    customCesiumBaseUrl = false,
-    css = false,
-  } = options
+export function resolveOptions(userOptions: Partial<BuildCesiumOptions> = {}, defaultFrom: string): BuildCesiumOptions {
+  const defaultOptions: BuildCesiumOptions = {
+    from: defaultFrom,
+    to: 'cesium-package',
+    customCesiumBaseUrl: false,
+    css: false,
+  }
 
   return {
-    from: from.replace(/[/\\]$/, ''),
-    to: to.replace(/^[/\\]|[/\\]$/, ''),
-    customCesiumBaseUrl,
-    css,
+    ...defaultOptions,
+    ...userOptions,
   }
 }

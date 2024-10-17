@@ -1,4 +1,5 @@
 import type { Plugin } from 'vite'
+import { join } from 'pathe'
 
 import { viteExternalsPlugin } from 'vite-plugin-externals'
 import { viteStaticCopy } from 'vite-plugin-static-copy'
@@ -6,7 +7,7 @@ import { viteStaticCopy } from 'vite-plugin-static-copy'
 import { type BuildCesiumOptions, imports, resolveOptions, setBaseUrl } from './core'
 
 function pluginEntry(pluginOptions?: Partial<BuildCesiumOptions>): Plugin[] {
-  const options = resolveOptions(pluginOptions, 'node_modules/cesium/Build/Cesium')
+  const options = resolveOptions(pluginOptions, './node_modules/cesium/Build/Cesium')
 
   return [
     // externals
@@ -17,19 +18,19 @@ function pluginEntry(pluginOptions?: Partial<BuildCesiumOptions>): Plugin[] {
       targets: [
         // resources
         ...['Assets', 'ThirdParty', 'Widgets', 'Workers'].map(item => ({
-          src: `${options.from}/${item}/*`,
-          dest: `${options.to}/${item}/`,
+          src: join(options.from, item, '*'),
+          dest: join(options.to, item, '/'),
         })),
         // Cesium.js
         {
-          src: `${options.from}/Cesium.js`,
-          dest: `${options.to}/`,
+          src: join(options.from, 'Cesium.js'),
+          dest: join(options.to, '/'),
         },
         // css
         ...options.css
           ? [{
-              src: `${options.from}/Widgets/widgets.css`,
-              dest: `${options.to}/Widgets/`,
+              src: join(options.from, '/Widgets/widgets.css'),
+              dest: join(options.to, '/Widgets/'),
             }]
           : [],
       ],
@@ -37,12 +38,12 @@ function pluginEntry(pluginOptions?: Partial<BuildCesiumOptions>): Plugin[] {
     }),
 
     // imports
-    imports([base => `${base}${options.from}Unminified/Cesium.js`], 'serve'),
-    imports([base => `${base}${options.to}/Cesium.js`], 'build'),
+    imports([base => join(base, options.from.replace(/\/Cesium\/?$/, ''), 'CesiumUnminified/Cesium.js')], 'serve'),
+    imports([base => join(base, options.to, 'Cesium.js')], 'build'),
     ...options.css
       ? [
-          imports([base => `${base}${options.from}/Widgets/widgets.css`], 'serve'),
-          imports([base => `${base}${options.to}/Widgets/widgets.css`], 'build'),
+          imports([base => join(base, options.from, 'Widgets/widgets.css')], 'serve'),
+          imports([base => join(base, options.to, 'Widgets/widgets.css')], 'build'),
         ]
       : [],
 

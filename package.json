@@ -48,11 +48,10 @@
   "scripts": {
     "dev": "unbuild --stub",
     "build": "tsc && unbuild",
-    "type:check": "tsc",
     "build:only": "unbuild",
     "test": "vitest",
     "test:once": "vitest run",
-    "release": "pnpm type:check && bumpp",
+    "release": "tsc && bumpp",
     "publish:ci": "pnpm publish --access public --no-git-checks",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
@@ -62,6 +61,7 @@
   },
   "dependencies": {
     "consola": "^3.2.3",
+    "pathe": "^1.1.2",
     "vite-plugin-externals": "^0.6.2",
     "vite-plugin-static-copy": "^1.0.6"
   },
