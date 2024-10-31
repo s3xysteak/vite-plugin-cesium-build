@@ -13,6 +13,7 @@
   },
   "devDependencies": {
     "vite": "catalog:",
-    "vite-plugin-cesium-build": "workspace:*"
+    "vite-plugin-cesium-build": "workspace:*",
+    "vite-plugin-inspect": "^0.8.7"
   }
 }
