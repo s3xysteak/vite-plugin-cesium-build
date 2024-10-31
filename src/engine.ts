@@ -1,10 +1,10 @@
-import type { Plugin } from 'vite'
+import type { PluginOption } from 'vite'
 import { join } from 'pathe'
 
 import { viteStaticCopy } from 'vite-plugin-static-copy'
 import { type BuildCesiumOptions, imports, resolveOptions, setBaseUrl } from './core'
 
-function pluginEntry(pluginOptions?: Partial<BuildCesiumOptions>): Plugin[] {
+function pluginEntry(pluginOptions?: Partial<BuildCesiumOptions>): PluginOption[] {
   const options = resolveOptions(pluginOptions, './node_modules/@cesium/engine')
 
   return [

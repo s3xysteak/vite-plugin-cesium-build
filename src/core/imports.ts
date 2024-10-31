@@ -1,7 +1,7 @@
-import type { Plugin, ResolvedConfig } from 'vite'
+import type { PluginOption, ResolvedConfig } from 'vite'
 import { isString } from './utils'
 
-export function imports(pathList: Array<(base: string) => string>, apply?: Plugin['apply']): Plugin {
+export function imports(pathList: Array<(base: string) => string>, apply?: PluginOption['apply']): PluginOption {
   let base: ResolvedConfig['base']
 
   return {

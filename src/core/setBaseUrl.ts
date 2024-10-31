@@ -1,9 +1,9 @@
-import type { Plugin, ResolvedConfig } from 'vite'
+import type { PluginOption, ResolvedConfig } from 'vite'
 import type { BuildCesiumOptions } from './resolveOptions'
 import { join } from 'pathe'
 import { isString } from './utils'
 
-export function setBaseUrl(options: BuildCesiumOptions): Plugin {
+export function setBaseUrl(options: BuildCesiumOptions): PluginOption {
   const { customCesiumBaseUrl, to } = options
   let base: ResolvedConfig['base']
 
