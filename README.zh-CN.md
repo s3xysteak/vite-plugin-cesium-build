@@ -78,7 +78,9 @@ export default defineConfig({
 这样就可以通过 ESM 来按需引入。
 
 > [!TIP]
-> 你可以通过 `build.rollupOptions.output.manualChunks` 以改进生产环境下的缓存表现，如 `cesium: ['cesium']`。
+> 你可以通过 `build.rollupOptions.output.manualChunks` 以改进生产环境下的缓存表现。
+>
+> 如 `cesium: ['cesium']`。
 
 ## :wrench: 选项
 
