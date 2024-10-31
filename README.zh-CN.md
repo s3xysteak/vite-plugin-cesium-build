@@ -65,6 +65,23 @@ export default defineConfig({
 <link rel="stylesheet" href="./cesium-package/Widgets/widgets.css">
 ```
 
+默认情况下通过 iife 引入 Cesium.js ，这可以跳过漫长的打包时间。如果你希望按需引入，可以设置 `iife: false`：
+
+```javascript
+export default defineConfig({
+  plugins: [
+    cesium({ iife: false })
+  ]
+})
+```
+
+这样就可以通过 ESM 来按需引入。
+
+> [!TIP]
+> 你可以通过 `build.rollupOptions.output.manualChunks` 以改进生产环境下的缓存表现。
+>
+> 如 `cesium: ['cesium']`。
+
 ## :wrench: 选项
 
 除此以外，插件提供了一些配置项：
@@ -92,7 +109,12 @@ export default defineConfig({
       /**
        * 为 `true` 时, Cesium的样式将会被自动添加.
        */
-      css: boolean
+      css: false,
+
+      /**
+       * 为 true 时，通过iife引入Cesium.js以跳过对其的打包。为 false 时，不做任何处理。
+       */
+      iife: true
     })
   ]
 })

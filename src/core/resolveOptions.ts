@@ -23,6 +23,13 @@ export interface BuildCesiumOptions {
    * @default false
    */
   css: boolean
+
+  /**
+   * If `true`, using IIFE to skip building `Cesium.js`. If `false`, do not handle `Cesium.js`.
+   *
+   * @default true
+   */
+  iife: boolean
 }
 
 export function resolveOptions(userOptions: Partial<BuildCesiumOptions> = {}, defaultFrom: string): BuildCesiumOptions {
@@ -31,6 +38,7 @@ export function resolveOptions(userOptions: Partial<BuildCesiumOptions> = {}, de
     to: 'cesium-package',
     customCesiumBaseUrl: false,
     css: false,
+    iife: true,
   }
 
   return {

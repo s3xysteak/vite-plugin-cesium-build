@@ -65,6 +65,23 @@ That will automatically add Cesium's css to your `index.html`:
 <link rel="stylesheet" href="./cesium-package/Widgets/widgets.css">
 ```
 
+In default it will import Cesium.js as IIFE, which could skip the long building time. If you want to import on demand, set `iife: false`:
+
+```javascript
+export default defineConfig({
+  plugins: [
+    cesium({ iife: false })
+  ]
+})
+```
+
+Then you can import on demand through ESM.
+
+> [!TIP]
+> You can improve the behavior of cache in production environments by `build.rollupOptions.output.manualChunks`.
+>
+> For example `cesium: ['cesium']`.
+
 ## :wrench: Options
 
 In addition, the plugin provides some configuration options:
@@ -92,7 +109,12 @@ export default defineConfig({
       /**
        * If `true`, Cesium's css will be added automatically.
        */
-      css: boolean
+      css: false,
+
+      /**
+       * If `true`, using IIFE to skip building `Cesium.js`. If `false`, do not handle `Cesium.js`.
+       */
+      iife: true
     })
   ]
 })
