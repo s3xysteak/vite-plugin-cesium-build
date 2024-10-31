@@ -78,21 +78,7 @@ export default defineConfig({
 Then you can import on demand through ESM.
 
 > [!TIP]
-> You can improve the behavior of cache in production environments by `build.rollupOptions.output.manualChunks`:
->
-> ```js
-> export default defineConfig({
->   build: {
->     rollupOptions: {
->       output: {
->         manualChunks: {
->           cesium: ['cesium'],
->         },
->       },
->     },
->   },
-> })
-> ```
+> You can improve the behavior of cache in production environments by `build.rollupOptions.output.manualChunks`, like `cesium: ['cesium']`.
 
 ## :wrench: Options
 
