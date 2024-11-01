@@ -46,7 +46,7 @@ function pluginEntry(pluginOptions?: Partial<BuildCesiumOptions>): PluginOption[
       : [],
 
     // base url
-    setBaseUrl(options),
+    ...options.customCesiumBaseUrl !== true ? [setBaseUrl(options)] : [],
   ]
 }
 

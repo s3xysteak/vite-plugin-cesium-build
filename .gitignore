@@ -1,4 +1,7 @@
-example/pnpm-lock.yaml
+.svelte-kit
+.output
+.vercel
+build
 
 # Logs
 logs
