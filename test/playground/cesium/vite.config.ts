@@ -7,7 +7,7 @@ export default defineConfig({
   base: '',
   plugins: [
     Inspect(),
-    cesium({ css: true, iife: false }),
+    cesium({ css: true }),
   ],
   build: {
     rollupOptions: {

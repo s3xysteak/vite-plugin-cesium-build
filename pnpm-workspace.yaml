@@ -1,8 +1,8 @@
 packages:
   - test/playground/*
   - examples/*
-
 catalog:
-  cesium: ^1.121.1
-  '@cesium/engine': ^11.0.0
-  vite: ^5.4.10
+  '@cesium/engine': ^12.0.1
+  cesium: ^1.123.1
+  vite: ^6.0.1
+  vite-plugin-inspect: ^0.10.0
