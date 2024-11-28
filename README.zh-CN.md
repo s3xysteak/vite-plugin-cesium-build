@@ -78,7 +78,7 @@ export default defineConfig({
 这样就可以通过 ESM 来按需引入。
 
 > [!TIP]
-> 你可以通过 vite选项 `build.rollupOptions.output.manualChunks` 以改进生产环境下的缓存表现。
+> 当 `iife: false` 时，你可以通过 vite选项 `build.rollupOptions.output.manualChunks` 以改进生产环境下的缓存表现。
 >
 > 如 `cesium: ['cesium']`。
 
