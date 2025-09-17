@@ -1,7 +1,7 @@
 {
   "name": "vite-plugin-cesium-build",
   "type": "module",
-  "version": "0.7.0",
+  "version": "0.7.1",
   "private": false,
   "packageManager": "pnpm@9.14.2",
   "description": "CesiumJS support for Vite",
