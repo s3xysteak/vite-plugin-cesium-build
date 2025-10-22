@@ -10,11 +10,11 @@
   },
   "dependencies": {
     "cesium": "catalog:",
-    "solid-js": "^1.9.3"
+    "solid-js": "^1.9.9"
   },
   "devDependencies": {
     "vite": "catalog:",
     "vite-plugin-cesium-build": "workspace:*",
-    "vite-plugin-solid": "^2.11.0"
+    "vite-plugin-solid": "^2.11.10"
   }
 }
