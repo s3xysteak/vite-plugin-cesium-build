@@ -3,7 +3,7 @@
   "type": "module",
   "version": "0.7.1",
   "private": false,
-  "packageManager": "pnpm@9.14.2",
+  "packageManager": "pnpm@10.19.0",
   "description": "CesiumJS support for Vite",
   "author": "s3xysteak",
   "license": "MIT",
@@ -60,28 +60,21 @@
     "vite": "^5.0.0 || ^6.0.0 || ^7.0.0"
   },
   "dependencies": {
-    "consola": "^3.2.3",
-    "pathe": "^1.1.2",
+    "consola": "^3.4.2",
+    "pathe": "^2.0.3",
     "vite-plugin-externals": "^0.6.2",
     "vite-plugin-static-copy": "^3.1.4"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^3.11.2",
-    "@s3xysteak/utils": "^0.9.0",
-    "@types/node": "^22.10.1",
-    "bumpp": "^9.8.1",
-    "eslint": "^9.15.0",
+    "@antfu/eslint-config": "^6.0.0",
+    "@s3xysteak/utils": "^1.1.0",
+    "@types/node": "^24.9.1",
+    "bumpp": "^10.3.1",
+    "eslint": "^9.38.0",
     "esno": "^4.8.0",
-    "typescript": "^5.7.2",
-    "unbuild": "^2.0.0",
+    "typescript": "^5.9.3",
+    "unbuild": "^3.6.1",
     "vite": "catalog:",
-    "vitest": "^2.1.6"
-  },
-  "pnpm": {
-    "peerDependencyRules": {
-      "allowedVersions": {
-        "eslint": "9"
-      }
-    }
+    "vitest": "^3.2.4"
   }
 }
