@@ -78,9 +78,26 @@ export default defineConfig({
 这样就可以通过 ESM 来按需引入。
 
 > [!TIP]
-> 当 `iife: false` 时，你可以通过 vite选项 `build.rollupOptions.output.manualChunks` 以改进生产环境下的缓存表现。
+> 当 `iife: false` 时，你可以通过 Vite 选项 `build.rolldownOptions.output.manualChunks` 以改进生产环境下的缓存表现。
 >
-> 如 `cesium: ['cesium']`。
+> 如：
+> ```ts
+> export default defineConfig({
+>   build: {
+>     rolldownOptions: {
+>       output: {
+>         manualChunks(id) {
+>           if (id.includes('node_modules/cesium')) {
+>             return 'cesium'
+>           }
+>         }
+>       }
+>     }
+>   }
+> })
+> ```
+>
+> (在 Vite8 前, 使用 `rollupOptions` 替换前文的 `rolldownOptions`)
 
 ## :wrench: 选项
 

@@ -78,9 +78,26 @@ export default defineConfig({
 Then you can import on demand through ESM.
 
 > [!TIP]
-> When `iife: false`, you can improve the behavior of cache in production environments by vite option `build.rollupOptions.output.manualChunks`.
+> When `iife: false`, you can improve the behavior of cache in production environments by vite option `build.rolldownOptions.output.manualChunks`.
 >
-> For example `cesium: ['cesium']`.
+> For example:
+> ```ts
+> export default defineConfig({
+>   build: {
+>     rolldownOptions: {
+>       output: {
+>         manualChunks(id) {
+>           if (id.includes('node_modules/cesium')) {
+>             return 'cesium'
+>           }
+>         }
+>       }
+>     }
+>   }
+> })
+> ```
+>
+> (before Vite8, using `rollupOptions` instead of `rolldownOptions`)
 
 ## :wrench: Options
 

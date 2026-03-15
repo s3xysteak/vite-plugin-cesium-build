@@ -10,10 +10,12 @@ export default defineConfig({
     cesium({ css: true }),
   ],
   build: {
-    rollupOptions: {
+    rolldownOptions: {
       output: {
-        manualChunks: {
-          cesium: ['cesium'],
+        manualChunks: (id) => {
+          if (id.includes('node_modules/cesium')) {
+            return 'cesium'
+          }
         },
       },
     },
